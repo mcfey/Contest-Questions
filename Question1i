@@ -19,7 +19,7 @@ for x in abc:
     n2= word2.count(x)
     letters2.append(n2)
 
-if letters1 = letters2:
+if letters1 == letters2:
     print("Output: true")
 
 else: 
