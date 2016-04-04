@@ -1,11 +1,10 @@
 
 words = input("Enter two words?")
+words = words.lower()
 words = words.split(' ')
 
 word1 = words[0]
 word2 = words[1]
-
-print(word1)
 
 import string
 abc= string.ascii_lowercase
@@ -14,10 +13,14 @@ letters2 = []
 
 for x in abc:
     n1= word1.count(x)
-    if n1 > 0:
-        letters1.append(n1)
+    letters1.append(n1)
 
 for x in abc:
     n2= word2.count(x)
-    if n2 > 0:
-        letters2.append(n2)
+    letters2.append(n2)
+
+if letters1 = letters2:
+    print("Output: true")
+
+else: 
+    print("Output: false")
