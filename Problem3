@@ -1,6 +1,6 @@
 
 n = input("Enter number? ")
 
-nfact = n.factorial
+nfact = n.factorial()
 
 print(nfact)
