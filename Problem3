@@ -1,7 +1,9 @@
 
 n = int(input("Enter number? "))
 
+list1 = range(0,n)
 nfact = 1
-for x in list(range(0,n)):
-    nfact = n*nfact
+for x in list1:
+   nfact = n*nfact
+    
 print(nfact)
