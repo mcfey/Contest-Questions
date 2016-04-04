@@ -2,6 +2,6 @@
 n = input("Enter number? ")
 
 nfact = 1
-for x in range(0,n):
+for x in list(range(0,n)):
     nfact = n*nfact
 print(nfact)
