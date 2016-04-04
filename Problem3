@@ -7,4 +7,6 @@ for x in list1:
    nfact = n*nfact
    n=n-1
     
+nfact = str(nfact)
+nfact = reversed(nfact)
 print(nfact)
