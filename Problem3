@@ -2,3 +2,5 @@
 n = input("Enter number? ")
 
 nfact = n!
+
+print(nfact)
