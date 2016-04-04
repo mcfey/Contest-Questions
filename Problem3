@@ -8,3 +8,4 @@ for x in list1:
    n=n-1
     
 nfact = str(nfact)
+nfact = nfact[::-1]
