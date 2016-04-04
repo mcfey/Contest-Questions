@@ -1,5 +1,5 @@
 
 words = input("Enter two words?")
-words = text.split(' ')
+words = words.split(' ')
 
 print(words)
