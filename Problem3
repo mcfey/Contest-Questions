@@ -1,7 +1,7 @@
 
 n = int(input("Enter number? "))
 
-nfact = n.factorial
+nfact = n.factorial()
 #for x in list(range(0,n)):
     #nfact = n*nfact
-#print(nfact)
+print(nfact)
