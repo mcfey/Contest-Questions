@@ -1,7 +1,7 @@
 
-red = Color(0xff0000, 1.0)
-blue = Color(0x0000ff, 1.0)
+white = Color(0xffffff, 1.0)
 black = Color(0x000000, 1.0)
+red = Color(0xff0000, 1.0)
 white = Color(0xffffff, 0.9)
 thinline = LineStyle(1, black)
 
