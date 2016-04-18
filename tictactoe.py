@@ -7,13 +7,13 @@ red = Color(0xff0000, 1.0)
 white = Color(0xffffff, 0.9)
 thinline = LineStyle(1, black)
 
-vline = RectangleAsset(20, 300, thinline, black)
+vline = RectangleAsset(10, 300, thinline, black)
 hline = RectangleAsset(300, 20, thinline, black)
 
-Sprite(vline, (110, 10))
-Sprite(vline, (210, 10))
-Sprite(hline, (10, 110))
-Sprite(hline, (10, 210))
+Sprite(vline, (140, 40))
+Sprite(vline, (240, 40))
+Sprite(hline, (40, 140))
+Sprite(hline, (40, 240))
 
 #choice = input("Would you like to be X's or O's? )
 
