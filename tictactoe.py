@@ -8,7 +8,7 @@ white = Color(0xffffff, 0.9)
 thinline = LineStyle(1, black)
 
 vline = RectangleAsset(10, 300, thinline, black)
-hline = RectangleAsset(300, 20, thinline, black)
+hline = RectangleAsset(300, 10, thinline, black)
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
