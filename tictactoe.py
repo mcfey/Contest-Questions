@@ -1,6 +1,8 @@
 
-white = Color(0xffffff, 1.0)
+from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+
 black = Color(0x000000, 1.0)
+white = Color(0xffffff, 1.0)
 red = Color(0xff0000, 1.0)
 white = Color(0xffffff, 0.9)
 thinline = LineStyle(1, black)
