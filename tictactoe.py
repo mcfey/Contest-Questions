@@ -25,7 +25,7 @@ Sprite(o
 #choice = input("Would you like to be X's or O's? )
 
 
-class TTT(app):
+Class TTT(app):
     
     def __init__(self):
         self.listenMouseEvent( 'click', self.click)
