@@ -15,8 +15,8 @@ xline = LineStyle(8, red)
 
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
-o = CircleAsset(30, oline, clear)
-x = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
+oshape = CircleAsset(30, oline, clear)
+xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
 #PolygonAsset([(180,10),(140,90),(220,90)], thinline, darkgreen)
 
@@ -31,13 +31,13 @@ osprites = [ ]
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
-        so = Sprite(o, (x,y))
+        so = Sprite(oshape, (x,y))
         so.visible = False
         osprites.append(so)
 
-for a in [95, 195, 295]:
-    for b in [95, 195, 295]:
-        sx = Sprite(x, (a,b))
+for x in [95, 195, 295]:
+    for y in [95, 195, 295]:
+        sx = Sprite(xshape, (a,b))
 
 class Ttt(App):
     
