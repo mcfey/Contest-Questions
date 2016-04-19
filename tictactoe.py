@@ -27,6 +27,7 @@ for x in [95, 195, 295]:
         so.visible = False
 
 #choice = input("Would you like to be X's or O's? )
+#difficulty??
 
 
 class Ttt(App):
@@ -38,7 +39,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        s.visible = True
+        for 
 
 
 
