@@ -38,7 +38,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        Sprite(o, (x, y))
+        if 
 
 
 
