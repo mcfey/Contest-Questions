@@ -33,7 +33,7 @@ for x in [95, 195, 295]:
     for y in [95, 195, 295]:
         so = Sprite(o, (x,y))
         so.visible = False
-        sprites.append(so)
+        osprites.append(so)
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
