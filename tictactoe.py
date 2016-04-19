@@ -11,16 +11,18 @@ red = Color(0xff0000, 1.0)
 blue = Color(0x0000ff, 1.0)
 thinline = LineStyle(1, black)
 oline = LineStyle(8, blue)
+xline = LineStyle(8, red)
 
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
 o = CircleAsset(30, oline, clear)
+x = PolygonAsset([(0,0)(30,30)(60,0)(0,60)(30,30)(60,60)], xline, red)
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
-sprites = [ ]
+osprites = [ ]
 
 #choice = input("Would you like to be X's or O's? )
 #difficulty??
@@ -41,7 +43,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        for s in sprites:
+        for s in osprites:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
 
