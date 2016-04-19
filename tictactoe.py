@@ -20,14 +20,16 @@ Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
+sprites = [ ]
+
+#choice = input("Would you like to be X's or O's? )
+#difficulty??
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
         so = Sprite(o, (x,y))
         so.visible = False
-
-#choice = input("Would you like to be X's or O's? )
-#difficulty??
+        sprites.append(so)
 
 
 class Ttt(App):
@@ -39,7 +41,9 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        for 
+        for s in sprites
+            if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
+                s.visible = True
 
 
 
