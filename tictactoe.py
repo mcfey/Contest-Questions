@@ -35,8 +35,8 @@ for x in [95, 195, 295]:
         so.visible = False
         osprites.append(so)
 
-for x in [95, 195, 295]:
-    for y in [95, 195, 295]:
+for x in [55, 155, 255]:
+    for y in [55, 155, 255]:
         sx = Sprite(xshape, (x,y))
 
 class Ttt(App):
