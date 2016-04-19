@@ -10,7 +10,7 @@ clear = Color(0xffffff, 0.0)
 red = Color(0xff0000, 1.0)
 blue = Color(0x0000ff, 1.0)
 thinline = LineStyle(1, black)
-oline = LineStyle(5, blue)
+oline = LineStyle(7, blue)
 
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
