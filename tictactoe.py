@@ -1,4 +1,7 @@
+***
+Sources: 
 
+***
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 
 black = Color(0x000000, 1.0)
@@ -22,8 +25,6 @@ Sprite(o
 #choice = input("Would you like to be X's or O's? )
 
 
-
-
 class TTT(app):
     
     def __init__(self):
@@ -32,6 +33,9 @@ class TTT(app):
     def click(self, event):
         x = event.x
         y = event.y
+        Sprite(o, (x, y))
+
+
 
 myapp = App()
 myapp.run()
