@@ -21,8 +21,8 @@ Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 
-for x in [50, 150, 250]:
-    for y in [50, 150, 250]:
+for x in [100, 200, 300]:
+    for y in [100, 200, 300]:
         Sprite(o, (x,y))
 
 #choice = input("Would you like to be X's or O's? )
