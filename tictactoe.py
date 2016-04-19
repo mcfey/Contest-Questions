@@ -23,7 +23,8 @@ Sprite(hline, (40, 240))
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
-        Sprite(o, (x,y))
+        so = Sprite(o, (x,y))
+        so.visible = False
 
 #choice = input("Would you like to be X's or O's? )
 
