@@ -33,6 +33,9 @@ for x in [95, 195, 295]:
         so.visible = False
         sprites.append(so)
 
+for x in [95, 195, 295]:
+    for y in [95, 195, 295]:
+        sx = Sprite(x, (x,y))
 
 class Ttt(App):
     
