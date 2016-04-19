@@ -38,6 +38,7 @@ for x in [95, 195, 295]:
 for x in [60, 160, 260]:
     for y in [60, 160, 260]:
         sx = Sprite(xshape, (x,y))
+        so.visible = False
 
 class Ttt(App):
     
