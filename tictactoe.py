@@ -37,7 +37,7 @@ for x in [95, 195, 295]:
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
-        sx = Sprite(xshape, (a,b))
+        sx = Sprite(xshape, (x,y))
 
 class Ttt(App):
     
