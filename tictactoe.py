@@ -15,7 +15,6 @@ oline = LineStyle(8, blue)
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
 o = CircleAsset(30, oline, clear)
-x = 
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
@@ -39,7 +38,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        if 
+        s.visible = True
 
 
 
