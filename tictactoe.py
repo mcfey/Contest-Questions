@@ -1,7 +1,7 @@
-***
+"""
 Sources: 
 
-***
+"""
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 
 black = Color(0x000000, 1.0)
