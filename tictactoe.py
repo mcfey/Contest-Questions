@@ -28,6 +28,7 @@ Sprite(o
 class Ttt(App):
     
     def __init__(self):
+        super().__init__() 
         self.listenMouseEvent( 'click', self.click)
 
     def click(self, event):
