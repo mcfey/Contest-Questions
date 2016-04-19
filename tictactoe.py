@@ -16,7 +16,7 @@ xline = LineStyle(8, red)
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
 o = CircleAsset(30, oline, clear)
-x = PolygonAsset([(0,0),(30,30),(60,0),(0,60),(30,30),(60,60)], xline, red)
+x = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
 #PolygonAsset([(180,10),(140,90),(220,90)], thinline, darkgreen)
 
