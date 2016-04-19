@@ -20,7 +20,7 @@ Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 
-Sprite(o
+
 
 #choice = input("Would you like to be X's or O's? )
 
