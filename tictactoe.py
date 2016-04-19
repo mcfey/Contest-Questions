@@ -37,5 +37,5 @@ class TTT(app):
 
 
 
-myapp = App()
+myapp = TTT()
 myapp.run()
