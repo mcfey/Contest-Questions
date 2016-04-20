@@ -42,19 +42,21 @@ for x in [60, 160, 260]:
         xsprites.append(sx)
 
 choice = input("Would you like to be X's or O's? ")
+player = none
 
-if choice=="x":
-    player = xsprites
-    comp = osprites
-        
-elif choice=="o":
-    player = osprites
-    comp = xsprites
-        
-else:
-    choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
+while player==none
+    if choice=="x":
+        player = xsprites
+        comp = osprites
+            
+    elif choice=="o":
+        player = osprites
+        comp = xsprites
+            
+    else:
+        choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
  
-## Not looping???? after error message
+### Not looping???? after error message
  
 
 class Ttt(App):
@@ -63,6 +65,7 @@ class Ttt(App):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
 
+    
     def click(self, event):
         x = event.x
         y = event.y
@@ -73,7 +76,7 @@ class Ttt(App):
                 xorandom = random.choice(comp)
                 xorandom.visible = True
 
-## delete visible x from list
+### delete visible from list and other shape from one they clicked
 
 myapp = Ttt()
 myapp.run()
