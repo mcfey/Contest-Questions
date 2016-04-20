@@ -41,19 +41,20 @@ for x in [60, 160, 260]:
         xsprites.append(sx)
 
 choice = input("Would you like to be X's or O's? ")
+running = True 
 
-
-if choice=="x":
-    player = xsprites
-    comp = osprites
-    
-elif choice=="o":
-    player = osprites
-    comp = xsprites
-    
-else:
-    choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
-    
+While running == True:
+    if choice=="x":
+        player = xsprites
+        comp = osprites
+        
+    elif choice=="o":
+        player = osprites
+        comp = xsprites
+        
+    else:
+        choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
+ 
 
 class Ttt(App):
     
