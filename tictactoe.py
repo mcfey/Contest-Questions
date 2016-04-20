@@ -79,7 +79,11 @@ class Ttt(App):
                 
                 xorandom = random.choice(comp)
                 xorandom.visible = True
+                
                 comp.remove(xorandom)
+                for sprit in player:
+                    if abs(sprit.x - sprite.x) <= 40 and abs(sprite.y - sprit.y) <= 40:
+                        player.remove(sprite)
 
 ### delete visible from list and other shape from one they clicked
 
