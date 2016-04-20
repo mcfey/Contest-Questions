@@ -71,7 +71,7 @@ class Ttt(App):
                 s.visible = True
                 
                 xrandom = random.choice(xsprites)
-                xrandom.visible == True
+                xrandom.visible = True
 
 ## delete visible x from list
 
