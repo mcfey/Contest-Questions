@@ -1,5 +1,5 @@
 """
-Sources: Tess Snyder 
+Sources: Tess Snyder, https://docs.python.org/2/tutorial/datastructures.html
 
 """
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
@@ -55,9 +55,8 @@ while player==0:
             
     else:
         choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
- 
-### Not looping???? after error message
- 
+
+
 
 class Ttt(App):
     
@@ -73,8 +72,13 @@ class Ttt(App):
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
                 
-                xorandom = random.choice(comp)
-                xorandom.visible = True
+                for sprite in comp:
+                    if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
+                        comp.remove(sprite)
+                
+            xorandom = random.choice(comp)
+            xorandom.visible = True
+            comp.remove(xorandom)
 
 ### delete visible from list and other shape from one they clicked
 
