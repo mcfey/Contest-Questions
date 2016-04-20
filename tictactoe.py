@@ -70,8 +70,8 @@ class Ttt(App):
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
                 
-                random = random.choice(comp)
-                random.visible = True
+                xorandom = random.choice(comp)
+                xorandom.visible = True
 
 ## delete visible x from list
 
