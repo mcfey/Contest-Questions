@@ -25,9 +25,8 @@ Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 osprites = [ ]
+xsprites = [ ]
 
-#choice = input("Would you like to be X's or O's? )
-#difficulty??
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
@@ -39,6 +38,23 @@ for x in [60, 160, 260]:
     for y in [60, 160, 260]:
         sx = Sprite(xshape, (x,y))
         sx.visible = False
+        xsprites.append(sx)
+
+choice = input("Would you like to be X's or O's? ")
+choice = choice.lower
+
+if choice=="x" or choice=="x's":
+    Splayer = xsprites
+    Scomp = osprites
+    
+elif choice=="o" or choice=="o's":
+    Splayer = osprites
+    Scomp = xsprites
+    
+else:
+    error = input("Invalid input. Try again. (Press Enter)")
+    choice = input("Would you like to be X's or O's? ")
+    choice = choice.lower
 
 class Ttt(App):
     
@@ -49,7 +65,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        for s in osprites:
+        for s in Splayer:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
 
