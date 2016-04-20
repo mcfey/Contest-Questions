@@ -42,9 +42,9 @@ for x in [60, 160, 260]:
         xsprites.append(sx)
 
 choice = input("Would you like to be X's or O's? ")
-player = 0
+player = none
 
-while player==0
+while player==none:
     if choice=="x":
         player = xsprites
         comp = osprites
