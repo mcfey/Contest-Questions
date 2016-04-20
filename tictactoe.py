@@ -71,6 +71,7 @@ class Ttt(App):
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
+                player.remove(s)
                 
                 for sprite in comp:
                     if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
