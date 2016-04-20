@@ -1,8 +1,9 @@
 """
-Sources: 
+Sources: Tess Snyder 
 
 """
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+import random
 
 black = Color(0x000000, 1.0)
 white = Color(0xffffff, 1.0)
@@ -41,19 +42,19 @@ for x in [60, 160, 260]:
         xsprites.append(sx)
 
 choice = input("Would you like to be X's or O's? ")
-running = True
 
-while running == True:
-    if choice=="x":
-        player = xsprites
-        comp = osprites
+if choice=="x":
+    player = xsprites
+    comp = osprites
         
-    elif choice=="o":
-        player = osprites
-        comp = xsprites
+elif choice=="o":
+    player = osprites
+    comp = xsprites
         
-    else:
-        choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
+else:
+    choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
+ 
+## Not looping???? after error message
  
 
 class Ttt(App):
@@ -68,8 +69,11 @@ class Ttt(App):
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
+                
+                xrandom = random.choice(xsprites)
+                xrandom.visible == True
 
-
+## delete visible x from list
 
 myapp = Ttt()
 myapp.run()
