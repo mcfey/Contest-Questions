@@ -43,11 +43,11 @@ for x in [60, 160, 260]:
 choice = input("Would you like to be X's or O's? ")
 choice = choice.lower
 
-if choice=="x" or choice=="x's":
+if choice=="x":
     player == xsprites
     comp == osprites
     
-elif choice=="o" or choice=="o's":
+elif choice=="o":
     player == osprites
     comp == xsprites
     
