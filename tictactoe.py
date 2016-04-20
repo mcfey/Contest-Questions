@@ -44,12 +44,12 @@ choice = input("Would you like to be X's or O's? ")
 choice = choice.lower
 
 if choice=="x" or choice=="x's":
-    Splayer = xsprites
-    Scomp = osprites
+    player == xsprites
+    comp == osprites
     
 elif choice=="o" or choice=="o's":
-    Splayer = osprites
-    Scomp = xsprites
+    player == osprites
+    comp == xsprites
     
 else:
     error = input("Invalid input. Try again. (Press Enter)")
