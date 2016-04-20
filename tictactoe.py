@@ -65,7 +65,7 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
-        for s in Splayer:
+        for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
 
