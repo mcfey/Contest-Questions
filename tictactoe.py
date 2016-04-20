@@ -44,12 +44,12 @@ choice = input("Would you like to be X's or O's? ")
 
 
 if choice=="x":
-    player == xsprites
-    comp == osprites
+    player = xsprites
+    comp = osprites
     
 elif choice=="o":
-    player == osprites
-    comp == xsprites
+    player = osprites
+    comp = xsprites
     
 else:
     choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
