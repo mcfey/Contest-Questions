@@ -23,7 +23,7 @@ xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
 w = PolygonAsset([(5,5),(15,30),(25,15),(35,30),(45,5),(35,30),(25,15),(15,30)], thickline, clear)
 i = PolygonAsset([(5,0),(5,30)], thickline, clear)
-n = PolygonAsset([(5,30),(5,0),(25,30),(25,0),(25,30),(5,0),(5,30)], thickline, clear)
+n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, clear)
 Sprite(w, (400, 160))
 Sprite(i, (455, 165))
 Sprite(n, (470, 165))
