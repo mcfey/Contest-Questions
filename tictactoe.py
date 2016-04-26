@@ -81,9 +81,9 @@ class Ttt(App):
                 xorandom.visible = True
                 
                 comp.remove(xorandom)
-                for spr in player:
-                    if abs(spr.x - sprite.x) <= 40 and abs(sprite.y - spr.y) <= 40:
-                        player.remove(spr)
+                    for spr in player:
+                        if abs(spr.x - sprite.x) <= 40 and abs(sprite.y - spr.y) <= 40:
+                            player.remove(spr)
 
 
 
