@@ -26,7 +26,8 @@ w = PolygonAsset([(5,5),(15,30),(25,15),(35,30),(45,5),(35,30),(25,15),(15,30)],
 i = PolygonAsset([(5,0),(5,30)], thickline, clear)
 n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, clear)
 s = CircleAsset(7.5, thickline, clear)
-scover = RectangleAsset(7.5, 15, whiteline, white)
+scover = RectangleAsset(8, 10, whiteline, white)
+
 
 Sprite(w, (400, 160))
 Sprite(i, (455, 165))
