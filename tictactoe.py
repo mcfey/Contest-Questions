@@ -10,16 +10,18 @@ white = Color(0xffffff, 1.0)
 clear = Color(0xffffff, 0.0)
 red = Color(0xff0000, 1.0)
 blue = Color(0x0000ff, 1.0)
-thinline = LineStyle(1, black)
+line = LineStyle(1, black)
 oline = LineStyle(8, blue)
 xline = LineStyle(8, red)
+
 
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
 oshape = CircleAsset(30, oline, clear)
 xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
-#PolygonAsset([(180,10),(140,90),(220,90)], thinline, darkgreen)
+w = PolygonAsset([(5,5),(10,15),(15,10)(20,15)(25,5)], line, black)
+sprite(w, (300, 200)
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
@@ -63,6 +65,8 @@ class Ttt(App):
     def __init__(self):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
+    
+    
 
     
     def click(self, event):
