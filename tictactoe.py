@@ -69,7 +69,7 @@ class Ttt(App):
         x = event.x
         y = event.y
         for s in player:
-            if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
+            if abs(x - s.x) <= 40 and abs(y - s.y) <= 40:
                 s.visible = True
                 player.remove(s)
                 
