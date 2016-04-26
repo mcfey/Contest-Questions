@@ -11,6 +11,7 @@ clear = Color(0xffffff, 0.0)
 red = Color(0xff0000, 1.0)
 blue = Color(0x0000ff, 1.0)
 thinline = LineStyle(1, black)
+thickline = LineStyle(5, black)
 oline = LineStyle(8, blue)
 xline = LineStyle(8, red)
 
@@ -20,7 +21,7 @@ hline = RectangleAsset(310, 10, thinline, black)
 oshape = CircleAsset(30, oline, clear)
 xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
-w = PolygonAsset([(5,5),(15,30),(25,20),(35,30),(45,5),(35,30),(25,20),(15,30)], thinline, clear)
+w = PolygonAsset([(5,5),(15,30),(25,25),(35,30),(45,5),(35,30),(25,25),(15,30)], thickline, clear)
 Sprite(w, (400, 160))
 
 Sprite(vline, (140, 40))
