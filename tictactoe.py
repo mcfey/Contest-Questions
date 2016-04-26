@@ -26,6 +26,7 @@ i = PolygonAsset([(5,0),(5,30)], thickline, clear)
 n = PolygonAsset([(5,30),(5,0),(25,30), (25,0)], thickline, clear)
 Sprite(w, (400, 160))
 Sprite(i, (455, 165))
+Sprite(n, (470, 165))
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
