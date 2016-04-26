@@ -21,7 +21,7 @@ oshape = CircleAsset(30, oline, clear)
 xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
 w = PolygonAsset([(5,5),(10,15),(15,10)(20,15)(25,5)], line, black)
-sprite(w, (300, 200)
+Sprite(w, (300, 200))
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
