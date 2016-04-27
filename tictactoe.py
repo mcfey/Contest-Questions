@@ -36,7 +36,7 @@ Sprite(n, (470, 165))
 Sprite(s, (513, 174))
 Sprite(s, (513, 187))
 Sprite(scover, (521,174))
-Sprite(scover, (504,187))
+Sprite(scover, (504,185))
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
