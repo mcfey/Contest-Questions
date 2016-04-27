@@ -44,6 +44,8 @@ Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 osprites = [ ]
 xsprites = [ ]
+playeralive = [ ]
+compalive = [ ]
 
 
 for x in [95, 195, 295]:
@@ -81,8 +83,7 @@ class Ttt(App):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
     
-    def click(self, event):
-        
+    
 
     
     def click(self, event):
@@ -91,6 +92,7 @@ class Ttt(App):
         for s in player:
             if abs(x - s.x) <= 40 and abs(y - s.y) <= 40:
                 s.visible = True
+                playeralive.append(s)
                 player.remove(s)
                 
                 for sprite in comp:
@@ -99,6 +101,7 @@ class Ttt(App):
                 
                 xorandom = random.choice(comp)
                 xorandom.visible = True
+                compalive.append(xorandom)
                 
                 comp.remove(xorandom)
                 for spr in player:
