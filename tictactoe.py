@@ -30,14 +30,6 @@ s = CircleAsset(7.5, medline, clear)
 scover = CircleAsset(5, whiteline, white)
 
 
-Sprite(w, (400, 160))
-Sprite(i, (455, 165))
-Sprite(n, (470, 165))
-Sprite(s, (514, 174))
-Sprite(s, (514, 187))
-Sprite(scover, (522,174))
-Sprite(scover, (505,185))
-
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
@@ -67,10 +59,14 @@ while player==0:
     if choice=="x":
         player = xsprites
         comp = osprites
+        playershape = xshape
+        compshape = oshape
             
     elif choice=="o":
         player = osprites
         comp = xsprites
+        playershape = oshape
+        compshape = xshape
             
     else:
         choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
@@ -83,7 +79,20 @@ class Ttt(App):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
     
-    
+    def click(self, event):
+        
+        for s in playeralive:
+            for sp in playeralive:
+                for spr in playeralive:
+                    if (s.x == sp.x == spr.x) or (s.y == sp.y == spr.y) or (s.y+100==sp.y and sp.y+100==spr.y and s.x+100==sp.x and sp.x+100==spr.x):
+                        Sprite(playershape, (460, 110))
+                        Sprite(w, (400, 160))
+                        Sprite(i, (455, 165))
+                        Sprite(n, (470, 165))
+                        Sprite(s, (514, 174))
+                        Sprite(s, (514, 187))
+                        Sprite(scover, (522,174))
+                        Sprite(scover, (505,185))
 
     
     def click(self, event):
