@@ -84,7 +84,7 @@ class Ttt(App):
                 for s in playeralive:
                     for sp in playeralive:
                         for spr in playeralive:
-                            if (s.x==sp.x==spr.x) #or (s.y==sp.y==spr.y) or (s.y+100==sp.y and sp.y+100==spr.y and s.x+100==sp.x and sp.x+100==spr.x):
+                            if (s.x==sp.x==spr.x): #or (s.y==sp.y==spr.y) or (s.y+100==sp.y and sp.y+100==spr.y and s.x+100==sp.x and sp.x+100==spr.x):
                                 Sprite(playershape, (460, 110))
                                 Sprite(w, (400, 160))
                                 Sprite(i, (455, 165))
