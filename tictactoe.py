@@ -13,7 +13,7 @@ blue = Color(0x0000ff, 1.0)
 whiteline = LineStyle(1,white)
 thinline = LineStyle(1, black)
 thickline = LineStyle(5, black)
-medline = LineStyle(3, black)
+medline = LineStyle(4, black)
 oline = LineStyle(8, blue)
 xline = LineStyle(8, red)
 
@@ -27,7 +27,7 @@ w = PolygonAsset([(5,5),(15,30),(25,15),(35,30),(45,5),(35,30),(25,15),(15,30)],
 i = PolygonAsset([(5,0),(5,30)], thickline, clear)
 n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, clear)
 s = CircleAsset(7.5, medline, clear)
-scover = CircleAsset(3, whiteline, white)
+scover = CircleAsset(5, whiteline, white)
 
 
 Sprite(w, (400, 160))
@@ -35,8 +35,8 @@ Sprite(i, (455, 165))
 Sprite(n, (470, 165))
 Sprite(s, (510, 172))
 Sprite(s, (510, 188))
-Sprite(scover, (513,169))
-Sprite(scover, (498,183))
+Sprite(scover, (520,169))
+Sprite(scover, (505,183))
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
