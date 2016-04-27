@@ -80,7 +80,7 @@ class Ttt(App):
         self.listenMouseEvent( 'click', self.click)
 
     def step(self):
-            if len(playeralive)>=3
+            if len(playeralive)>=3:
                 for s in playeralive:
                     for sp in playeralive:
                         for spr in playeralive:
