@@ -33,10 +33,10 @@ scover = CircleAsset(5, whiteline, white)
 Sprite(w, (400, 160))
 Sprite(i, (455, 165))
 Sprite(n, (470, 165))
-Sprite(s, (513, 174))
-Sprite(s, (513, 187))
-Sprite(scover, (521,174))
-Sprite(scover, (504,185))
+Sprite(s, (514, 174))
+Sprite(s, (514, 187))
+Sprite(scover, (522,174))
+Sprite(scover, (505,185))
 
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
@@ -81,7 +81,8 @@ class Ttt(App):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
     
-    
+    def click(self, event):
+        
 
     
     def click(self, event):
