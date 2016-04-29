@@ -83,20 +83,7 @@ class Ttt(App):
     def step(self):
             if len(playeralive)>=3:
                 running = True
-                pxvalues = []
-                for p in playeralive:
-                    append.pxvalues(p.x)
-                pxvalues.sort()
-                for n in range(len(playeralive)):
-                    if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
-                            Sprite(playershape, (460, 110))
-                            Sprite(w, (400, 160))
-                            Sprite(i, (455, 165))
-                            Sprite(n, (470, 165))
-                            Sprite(s, (514, 174))
-                            Sprite(s, (514, 187))
-                            Sprite(scover, (522,174))
-                            Sprite(scover, (505,185))
+
     
     def click(self, event):
         x = event.x
@@ -124,21 +111,21 @@ class Ttt(App):
                     if abs(spr.x - compsprite.x) <= 40 and abs(compsprite.y - spr.y) <= 40:
                         player.remove(spr)
         
-        #while running == True:
-           #pxvalues = []
-            #for p in playeralive:
-                #append.pxvalues(p.x)
-            #pxvalues.sort()
-            #for n in range(len(playeralive)):
-                #if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
-                        #Sprite(playershape, (460, 110))
-                        #Sprite(w, (400, 160))
-                        #Sprite(i, (455, 165))
-                        #Sprite(n, (470, 165))
-                        #Sprite(s, (514, 174))
-                        #Sprite(s, (514, 187))
-                        #Sprite(scover, (522,174))
-                        #Sprite(scover, (505,185))
+        while running == True:
+           pxvalues = []
+            for p in playeralive:
+                append.pxvalues(p.x)
+            pxvalues.sort()
+            for n in range(len(playeralive)):
+                if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
+                        Sprite(playershape, (460, 110))
+                        Sprite(w, (400, 160))
+                        Sprite(i, (455, 165))
+                        Sprite(n, (470, 165))
+                        Sprite(s, (514, 174))
+                        Sprite(s, (514, 187))
+                        Sprite(scover, (522,174))
+                        Sprite(scover, (505,185))
     
 
 myapp = Ttt()
