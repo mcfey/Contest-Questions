@@ -81,18 +81,20 @@ class Ttt(App):
 
     def step(self):
             if len(playeralive)>=3:
-                for s in playeralive:
-                    for sp in playeralive:
-                        for spr in playeralive:
-                            if (s.x==sp.x==spr.x): #or (s.y==sp.y==spr.y) or (s.y+100==sp.y and sp.y+100==spr.y and s.x+100==sp.x and sp.x+100==spr.x):
-                                Sprite(playershape, (460, 110))
-                                Sprite(w, (400, 160))
-                                Sprite(i, (455, 165))
-                                Sprite(n, (470, 165))
-                                Sprite(s, (514, 174))
-                                Sprite(s, (514, 187))
-                                Sprite(scover, (522,174))
-                                Sprite(scover, (505,185))
+                pxvalues = []
+                for p in playeralive:
+                    append.pxvalues(p.x)
+                pxvalues.sort()
+                for n range(len(playeralive)):
+                    if pxvalues[n] = pxvalues[n+1] = pxvalues[n+2]:
+                            Sprite(playershape, (460, 110))
+                            Sprite(w, (400, 160))
+                            Sprite(i, (455, 165))
+                            Sprite(n, (470, 165))
+                            Sprite(s, (514, 174))
+                            Sprite(s, (514, 187))
+                            Sprite(scover, (522,174))
+                            Sprite(scover, (505,185))
     
     def click(self, event):
         x = event.x
