@@ -111,30 +111,35 @@ class Ttt(App):
                     if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
                         comp.remove(sprite)
                 
-                xorandom = random.choice(comp)
-                xorandom.visible = True
-                compalive.append(xorandom)
+                for compsprite in comp:
+                    if s.x = compsprite.x
+                    compsprite.visible = True
+                    compalive.append(compsprite)
+                    elif: 
+                        s.y = compsprite.y
+                        compsprite.visible = True
+                        compalive.append(compsprite)
                 
-                comp.remove(xorandom)
+                comp.remove(compsprite)
                 for spr in player:
-                    if abs(spr.x - xorandom.x) <= 40 and abs(xorandom.y - spr.y) <= 40:
+                    if abs(spr.x - compsprite.x) <= 40 and abs(compsprite.y - spr.y) <= 40:
                         player.remove(spr)
         
-        while running == True:
-            pxvalues = []
-            for p in playeralive:
-                append.pxvalues(p.x)
-            pxvalues.sort()
-            for n in range(len(playeralive)):
-                if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
-                        Sprite(playershape, (460, 110))
-                        Sprite(w, (400, 160))
-                        Sprite(i, (455, 165))
-                        Sprite(n, (470, 165))
-                        Sprite(s, (514, 174))
-                        Sprite(s, (514, 187))
-                        Sprite(scover, (522,174))
-                        Sprite(scover, (505,185))
+        #while running == True:
+           #pxvalues = []
+            #for p in playeralive:
+                #append.pxvalues(p.x)
+            #pxvalues.sort()
+            #for n in range(len(playeralive)):
+                #if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
+                        #Sprite(playershape, (460, 110))
+                        #Sprite(w, (400, 160))
+                        #Sprite(i, (455, 165))
+                        #Sprite(n, (470, 165))
+                        #Sprite(s, (514, 174))
+                        #Sprite(s, (514, 187))
+                        #Sprite(scover, (522,174))
+                        #Sprite(scover, (505,185))
     
 
 myapp = Ttt()
