@@ -111,8 +111,8 @@ class Ttt(App):
                     if abs(spr.x - compsprite.x) <= 40 and abs(compsprite.y - spr.y) <= 40:
                         player.remove(spr)
         
+        pxvalues = [ ]
         while running == True:
-           pxvalues = []
             for p in playeralive:
                 append.pxvalues(p.x)
             pxvalues.sort()
