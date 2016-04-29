@@ -85,7 +85,7 @@ class Ttt(App):
                 for p in playeralive:
                     append.pxvalues(p.x)
                 pxvalues.sort()
-                for n list(range(len(playeralive))):
+                for n in range(len(playeralive)):
                     if pxvalues[n] = pxvalues[n+1] = pxvalues[n+2]:
                             Sprite(playershape, (460, 110))
                             Sprite(w, (400, 160))
