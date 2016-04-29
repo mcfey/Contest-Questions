@@ -112,10 +112,10 @@ class Ttt(App):
                         comp.remove(sprite)
                 
                 for compsprite in comp:
-                    if s.x = compsprite.x:
+                    if s.x == compsprite.x:
                         compsprite.visible = True
                         compalive.append(compsprite)
-                    elif s.y = compsprite.y:
+                    elif s.y == compsprite.y:
                         compsprite.visible = True
                         compalive.append(compsprite)
                 
