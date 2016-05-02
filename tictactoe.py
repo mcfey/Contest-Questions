@@ -107,7 +107,6 @@ class Ttt(App):
                         player.remove(spr)
 
 
-
 myapp = Ttt()
 myapp.run()
 
