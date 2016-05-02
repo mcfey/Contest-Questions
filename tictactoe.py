@@ -85,20 +85,20 @@ class Ttt(App):
                     if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
                         comp.remove(sprite)
                 
-                for c in comp:
-                    if s.x == c.x:
-                        c.visible = True
-                        comp.remove(c)
-                        for spr in player:
-                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                #for c in comp:
+                    #if s.x == c.x:
+                        #c.visible = True
+                        #comp.remove(c)
+                        #for spr in player:
+                            #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                #player.remove(spr)
+                    #elif s.y == c.y:
+                        #c.visible = True
+                        #comp.remove(c)
+                        #for spr in player:
+                            #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                 player.remove(spr)
-                    elif s.y == c.y:
-                        c.visible = True
-                        comp.remove(c)
-                        for spr in player:
-                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                player.remove(spr)
-                    else:
+                    #else:
                         crandom = random.choice(comp)
                         comp.remove(crandom)
                         for spr in player:
