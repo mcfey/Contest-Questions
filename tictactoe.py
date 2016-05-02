@@ -28,7 +28,6 @@ n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, 
 s = CircleAsset(7.5, medline, clear)
 scover = CircleAsset(5, whiteline, white)
 
-
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
@@ -57,14 +56,10 @@ while player==0:
     if choice=="x":
         player = xsprites
         comp = osprites
-        playershape = xshape
-        compshape = oshape
             
     elif choice=="o":
         player = osprites
         comp = xsprites
-        playershape = oshape
-        compshape = xshape
             
     else:
         choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
@@ -77,11 +72,6 @@ class Ttt(App):
         super().__init__() 
         self.listenMouseEvent( 'click', self.click)
         running = False
-
-    #def step(self):
-            #if len(playeralive)>=3:
-                #running = True
-
     
     def click(self, event):
         x = event.x
@@ -114,15 +104,19 @@ class Ttt(App):
                         for spr in player:
                             if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                 player.remove(spr)
-                
-        
-        
-    
+
+
 
 myapp = Ttt()
 myapp.run()
 
 
+
+
+
+    #def step(self):
+            #if len(playeralive)>=3:
+                #running = True
 
 
 #pxvalues = [ ]
