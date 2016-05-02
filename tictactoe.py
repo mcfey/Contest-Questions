@@ -36,8 +36,7 @@ Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 osprites = [ ]
 xsprites = [ ]
-playeralive = [ ]
-compalive = [ ]
+
 
 
 for x in [95, 195, 295]:
@@ -88,6 +87,8 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
+        playeralive = [ ]
+        compalive = [ ]
         for s in player:
             if abs(x - s.x) <= 40 and abs(y - s.y) <= 40:
                 s.visible = True
@@ -98,20 +99,29 @@ class Ttt(App):
                     if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
                         comp.remove(sprite)
                 
-                for compsprite in comp:
-                    if s.x == compsprite.x:
-                        compsprite.visible = True
-                        compalive.append(compsprite)
-                    elif s.y == compsprite.y:
-                        compsprite.visible = True
-                        compalive.append(compsprite)
+                for c in comp:
+                    if s.x == c.x:
+                        c.visible = True
+                        compalive.append(c)
+                    elif s.y == c.y:
+                        c.visible = True
+                        compalive.append(c)
                 
                 comp.remove(compsprite)
                 for spr in player:
                     if abs(spr.x - compsprite.x) <= 40 and abs(compsprite.y - spr.y) <= 40:
                         player.remove(spr)
         
-        #pxvalues = [ ]
+        
+    
+
+myapp = Ttt()
+myapp.run()
+
+
+
+
+#pxvalues = [ ]
         #while running == True:
             #for p in playeralive:
                 #append.pxvalues(p.x)
@@ -126,7 +136,3 @@ class Ttt(App):
                         #Sprite(s, (514, 187))
                         #Sprite(scover, (522,174))
                         #Sprite(scover, (505,185))
-    
-
-myapp = Ttt()
-myapp.run()
