@@ -99,11 +99,11 @@ class Ttt(App):
                             #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                 player.remove(spr)
                     #else:
-                        crandom = random.choice(comp)
-                        comp.remove(crandom)
-                        for spr in player:
-                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
-                                player.remove(spr)
+                crandom = random.choice(comp)
+                comp.remove(crandom)
+                for spr in player:
+                    if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                        player.remove(spr)
 
 
 
