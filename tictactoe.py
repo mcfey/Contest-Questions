@@ -81,8 +81,8 @@ class Ttt(App):
         running = False
 
     def step(self):
-            #if len(playeralive)>=3:
-                #running = True
+            if len(playeralive)>=3:
+                running = True
 
     
     def click(self, event):
