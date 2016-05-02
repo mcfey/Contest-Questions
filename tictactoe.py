@@ -17,7 +17,6 @@ medline = LineStyle(4, black)
 oline = LineStyle(8, blue)
 xline = LineStyle(8, red)
 
-
 vline = RectangleAsset(10, 310, thinline, black)
 hline = RectangleAsset(310, 10, thinline, black)
 oshape = CircleAsset(30, oline, clear)
@@ -79,20 +78,17 @@ class Ttt(App):
         self.listenMouseEvent( 'click', self.click)
         running = False
 
-    def step(self):
-            if len(playeralive)>=3:
-                running = True
+    #def step(self):
+            #if len(playeralive)>=3:
+                #running = True
 
     
     def click(self, event):
         x = event.x
         y = event.y
-        playeralive = [ ]
-        compalive = [ ]
         for s in player:
             if abs(x - s.x) <= 40 and abs(y - s.y) <= 40:
                 s.visible = True
-                playeralive.append(s)
                 player.remove(s)
                 
                 for sprite in comp:
@@ -102,15 +98,23 @@ class Ttt(App):
                 for c in comp:
                     if s.x == c.x:
                         c.visible = True
-                        compalive.append(c)
+                        comp.remove(c)
+                        for spr in player:
+                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                            player.remove(spr)
                     elif s.y == c.y:
                         c.visible = True
-                        compalive.append(c)
+                        comp.remove(c)
+                        for spr in player:
+                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                            player.remove(spr)
+                    else:
+                        crandom = random.choice(comp)
+                        comp.remove(crandom)
+                        for spr in player:
+                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                            player.remove(spr)
                 
-                comp.remove(compsprite)
-                for spr in player:
-                    if abs(spr.x - compsprite.x) <= 40 and abs(compsprite.y - spr.y) <= 40:
-                        player.remove(spr)
         
         
     
