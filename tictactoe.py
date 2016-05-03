@@ -93,7 +93,9 @@ class Ttt(App):
                         for spr in player:
                             if abs(spr.x - sprite.x) <= 40 and abs(sprite.y - spr.y) <= 40:
                                 player.remove(spr)
+                        print("x value loop")
                         break
+                        
                         
                     else:
                         crandom = random.choice(comp)
@@ -103,7 +105,8 @@ class Ttt(App):
                             if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                 player.remove(spr)
                         break
-
+                        print("random loop")
+                    print("for loop")
 
 myapp = Ttt()
 myapp.run()
