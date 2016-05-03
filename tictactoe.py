@@ -89,7 +89,8 @@ class Ttt(App):
                 
                 for c in comp:
                     print("hey")
-                    if s.x==c.x:
+                    if abs(s.x-c.x) == 35:
+                        print("hi")
                         c.visible = True
                         comp.remove(c)
                         for spr in player:
