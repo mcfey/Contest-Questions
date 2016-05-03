@@ -89,7 +89,7 @@ class Ttt(App):
                         print(comp)
                     
                 
-                
+                ######some issues with the vstop / hstop thing and too many elses???
                 pxvalues = [ ]
                 for p in playeralive:
                     append.pxvalues(p.x)
@@ -136,14 +136,14 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                     
-                #else:
-                    #crandom = random.choice(comp)
-                    #crandom.visible = True
-                    #comp.remove(crandom)
-                    #for spr in player:
-                        #if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                else:
+                    crandom = random.choice(comp)
+                    crandom.visible = True
+                    comp.remove(crandom)
+                    for spr in player:
+                        if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                 #player.remove(spr)
-                    #break
+                    break
                     
 
 myapp = Ttt()
