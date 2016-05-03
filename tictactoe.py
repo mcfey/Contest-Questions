@@ -34,7 +34,7 @@ Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 osprites = [ ]
 xsprites = [ ]
-
+playeralive = [ ]
 
 
 for x in [95, 195, 295]:
@@ -76,33 +76,61 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
+        vstop = False
+        hstop = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
+                playeralive.append(s)
                 player.remove(s)
-                
                 for sprite in comp:
                     if abs(sprite.x - s.x) <= 40 and abs(sprite.y - s.y) <= 40:
                         comp.remove(sprite)
                         print(comp)
                     
                 
-                for c in comp:
-                    if abs(s.x-c.x) == 35:
-                        c.visible = True
-                        comp.remove(c)
-                        for spr in player:
-                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                player.remove(spr)
-                        break
+                for alive in playeralive:
+                    for a in playeralive:
+                        if a.x == alive.x:
+                            vstop = True
+                        if a.y == alive.y:
+                            hstop = True
+                
+                if vstop == True:
+                    for c in comp:
+                        if abs(c.x - a.x)==35:
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                
+                if hstop == True:
+                    for c in comp:
+                        if abs(c.y - a.y)==35:
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                
+                else:
+                    for c in comp:
+                        if abs(s.x-c.x) == 35:
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
                     
-                    elif abs(s.y - c.y) == 35:
-                        c.visible = True
-                        comp.remove(c)
-                        for spr in player:
-                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                player.remove(spr)
-                        break
+                        elif abs(s.y - c.y) == 35:
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
                     
                 else:
                     crandom = random.choice(comp)
