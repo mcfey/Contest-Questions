@@ -87,7 +87,7 @@ class Ttt(App):
                         print(comp)
                     
                 
-                for c in comp:    
+                for c in comp:
                     if s.x==c.x:
                         c.visible = True
                         comp.remove(c)
