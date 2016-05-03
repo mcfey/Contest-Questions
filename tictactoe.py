@@ -89,12 +89,14 @@ class Ttt(App):
                         print(comp)
                     
                 
-                for alive in playeralive:
-                    for a in playeralive:
-                        if a.x == alive.x:
+                
+                pxvalues = [ ]
+                for p in playeralive:
+                    append.pxvalues(p.x)
+                pxvalues.sort()
+                for n in range(len(playeralive)):
+                    if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
                             vstop = True
-                        if a.y == alive.y:
-                            hstop = True
                 
                 if vstop == True:
                     for c in comp:
@@ -104,6 +106,7 @@ class Ttt(App):
                             for spr in player:
                                 if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                     player.remove(spr)
+                            break
                 
                 if hstop == True:
                     for c in comp:
@@ -113,6 +116,7 @@ class Ttt(App):
                             for spr in player:
                                 if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                     player.remove(spr)
+                        break
                 
                 else:
                     for c in comp:
