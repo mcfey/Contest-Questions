@@ -87,20 +87,20 @@ class Ttt(App):
                         print(comp)
                     
                 
-                for sprite in comp:    
-                    if s.x == sprite.x:
-                        sprite.visible = True
-                        comp.remove(sprite)
+                for c in comp:    
+                    if s.x==c.x:
+                        c.visible = True
+                        comp.remove(c)
                         for spr in player:
-                            if abs(spr.x - sprite.x) <= 40 and abs(sprite.y - spr.y) <= 40:
+                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                 player.remove(spr)
                         break
-                    #elif s.y == sprite.y:
-                        #sprite.visible = True
-                        #comp.remove(sprite)
+                    #elif s.y == c.y:
+                        #c.visible = True
+                        #comp.remove(c)
                         #for spr in player:
-                            #if abs(spr.x - sprite.x) <= 40 and abs(sprite.y - spr.y) <= 40:
-                                player.remove(spr)
+                            #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                #player.remove(spr)
                         #break
                     
                 #else:
