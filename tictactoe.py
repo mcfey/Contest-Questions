@@ -89,18 +89,19 @@ class Ttt(App):
                         print(comp)
                     
                 
-                ######some issues with the vstop / hstop thing and too many elses???
+            
                 if len(playeralive) >= 2:    
                     pxvalues = [ ]
                     for p in playeralive:
                         pxvalues.append(p.x)
                     pxvalues.sort()
-                    for n in range(len(playeralive)):
+                    print(list(range(len(playeralive))))
+                    for n in list(range(len(playeralive))):
                         if pxvalues[n] == pxvalues[n+1]:
                                 value = pxvalues[n]
                                 vstop = True
-                print(value)
-                print(value.x)
+                #print(value)
+                #print(value.x)
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - value.x)==35:
