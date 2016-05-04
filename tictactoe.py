@@ -108,7 +108,7 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                if hstop == True:
+                elif hstop == True:
                     for c in comp:
                         if abs(c.y - a.y)==35:
                             c.visible = True
