@@ -95,11 +95,11 @@ class Ttt(App):
                     for p in playeralive:
                         pxvalues.append(p.x)
                     pxvalues.sort()
-                    print(list(range(len(playeralive))))
-                    for n in list(range(len(playeralive))):
+                    for n in list(range(len(playeralive)-1)):
                         if pxvalues[n] == pxvalues[n+1]:
                                 value = pxvalues[n]
                                 vstop = True
+                                break
                 #print(value)
                 #print(value.x)
                 if vstop == True:
