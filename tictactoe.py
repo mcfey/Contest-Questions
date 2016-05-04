@@ -97,17 +97,18 @@ class Ttt(App):
                     pxvalues.sort()
                     for n in list(range(len(playeralive)-1)):
                         if pxvalues[n] == pxvalues[n+1]:
-                                coordinate = pxvalues[n]
+                                #value = pxvalues[n]
                                 vstop = True
                                 break
-                print(coordinate)
+                #print(value)
                 if vstop == True:
+                    print("hi")
                     for c in comp:
-                        if abs(c.x - value.x)==35:
+                        if abs(c.x - s.x)==35:
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                     player.remove(spr)
                             break
                 
