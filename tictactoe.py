@@ -99,7 +99,8 @@ class Ttt(App):
                         if pxvalues[n] == pxvalues[n+1]:
                                 pxvalues[n] = value
                                 vstop = True
-                
+                print(value)
+                print(value.x)
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - value.x)==35:
