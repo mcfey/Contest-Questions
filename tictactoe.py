@@ -97,11 +97,10 @@ class Ttt(App):
                     pxvalues.sort()
                     for n in list(range(len(playeralive)-1)):
                         if pxvalues[n] == pxvalues[n+1]:
-                                value = pxvalues[n]
+                                coordinate = pxvalues[n]
                                 vstop = True
                                 break
-                print(value)
-                print(value.x)
+                print(coordinate)
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - value.x)==35:
