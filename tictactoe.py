@@ -97,11 +97,12 @@ class Ttt(App):
                     pxvalues.sort()
                     for n in range(len(playeralive)):
                         if pxvalues[n] == pxvalues[n+1]:
+                                pxvalues[n] = value
                                 vstop = True
                 
                 if vstop == True:
                     for c in comp:
-                        if abs(c.x - a.x)==35:
+                        if abs(c.x - value.x)==35:
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -109,14 +110,14 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                elif hstop == True:
-                    for c in comp:
-                        if abs(c.y - a.y)==35:
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
+                #elif hstop == True:
+                    #for c in comp:
+                        #if abs(c.y - a.y)==35:
+                            #c.visible = True
+                            #comp.remove(c)
+                            #for spr in player:
+                                #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    #player.remove(spr)
                         break
                 
                 else:
