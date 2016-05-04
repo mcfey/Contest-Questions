@@ -97,14 +97,22 @@ class Ttt(App):
                     pxvalues.sort()
                     for n in list(range(len(playeralive)-1)):
                         if pxvalues[n] == pxvalues[n+1]:
-                                #value = pxvalues[n]
                                 vstop = True
                                 break
-                #print(value)
+                    
+                    pyvalues = [ ]
+                    for p in playeralive:
+                        pyvalues.append(p.y)
+                    pyvalues.sort()
+                    for n in list(range(len(playeralive)-1)):
+                        if pyvalues[n] == pyvalues[n+1]:
+                                hstop = True
+                                break
+
+                
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - s.x)==35:
-                            print("hello")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -112,15 +120,15 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                #elif hstop == True:
-                    #for c in comp:
-                        #if abs(c.y - a.y)==35:
-                            #c.visible = True
-                            #comp.remove(c)
-                            #for spr in player:
-                                #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    #player.remove(spr)
-                        #break
+                elif hstop == True:
+                    for c in comp:
+                        if abs(c.y - s.y)==35:
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
                 
                 else:
                     for c in comp:
