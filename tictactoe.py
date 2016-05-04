@@ -97,7 +97,7 @@ class Ttt(App):
                     pxvalues.sort()
                     for n in range(len(playeralive)):
                         if pxvalues[n] == pxvalues[n+1]:
-                                pxvalues[n] = value
+                                value = pxvalues[n]
                                 vstop = True
                 print(value)
                 print(value.x)
