@@ -90,13 +90,14 @@ class Ttt(App):
                     
                 
                 ######some issues with the vstop / hstop thing and too many elses???
-                pxvalues = [ ]
-                for p in playeralive:
-                    pxvalues.append(p.x)
-                pxvalues.sort()
-                for n in range(len(playeralive)):
-                    if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
-                            vstop = True
+                if len(playeralive) >= 3:    
+                    pxvalues = [ ]
+                    for p in playeralive:
+                        pxvalues.append(p.x)
+                    pxvalues.sort()
+                    for n in range(len(playeralive)):
+                        if pxvalues[n] == pxvalues[n+1] == pxvalues[n+2]:
+                                vstop = True
                 
                 if vstop == True:
                     for c in comp:
