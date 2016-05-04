@@ -102,7 +102,6 @@ class Ttt(App):
                                 break
                 #print(value)
                 if vstop == True:
-                    print("hi")
                     for c in comp:
                         if abs(c.x - s.x)==35:
                             print("hello")
@@ -121,7 +120,7 @@ class Ttt(App):
                             #for spr in player:
                                 #if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                     #player.remove(spr)
-                        break
+                        #break
                 
                 else:
                     for c in comp:
