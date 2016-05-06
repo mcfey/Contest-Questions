@@ -121,16 +121,20 @@ class Ttt(App):
                             break
                 
                 elif hstop == True:
-                    for c in comp:
-                        if abs(c.y - s.y)==35:
-                            c.visible = True
-                            comp.remove(c)
+                    print("hstop")
+                    for co in comp:
+                        print("C")
+                        if abs(co.y - s.y)==35:
+                            print("equals")
+                            co.visible = True
+                            comp.remove(co)
                             for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
                                     player.remove(spr)
                             break
                 
-                if hstop == False and vstop ==False:
+                
+                if hstop==False and vstop==False:
                     for c in comp:
                         if abs(s.x-c.x) == 35:
                             c.visible = True
@@ -140,7 +144,7 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                     
-                        elif abs(s.y - c.y) == 35:
+                        elif abs(s.y-c.y) == 35: #DOES THIS PART WORK???
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -155,8 +159,6 @@ class Ttt(App):
                         for spr in player:
                             if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                     player.remove(spr)
-                        break
-                    
 
 myapp = Ttt()
 myapp.run()
