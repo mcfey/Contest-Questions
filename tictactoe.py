@@ -99,10 +99,11 @@ class Ttt(App):
                         if pxvalues[n] == pxvalues[n+1]:
                                 vstop = True
                                 break
-                    
+                
+                if len(playeralive) >= 2:
                     pyvalues = [ ]
-                    for p in playeralive:
-                        pyvalues.append(p.y)
+                    for play in playeralive:
+                        pyvalues.append(play.y)
                     pyvalues.sort()
                     for n in list(range(len(playeralive)-1)):
                         if pyvalues[n] == pyvalues[n+1]:
