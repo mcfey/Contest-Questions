@@ -185,6 +185,7 @@ class Ttt(App):
                 else:
                     for c in comp:
                         if abs(s.x-c.x) == 35:
+                            print("equal xs")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -193,6 +194,7 @@ class Ttt(App):
                             break
                             
                         elif abs(s.y-c.y) == 35: 
+                            print("y values")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -201,12 +203,14 @@ class Ttt(App):
                             break
                             
                         else:
+                            print("random")
                             crandom = random.choice(comp)
                             crandom.visible = True
                             comp.remove(crandom)
                             for spr in player:
                                 if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                     player.remove(spr)
+                            break 
 
 myapp = Ttt()
 myapp.run()
