@@ -189,7 +189,6 @@ class Ttt(App):
                             
                         elif abs(s.y-c.y) == 35:
                             print("else, y=")
-                            print("y values")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
