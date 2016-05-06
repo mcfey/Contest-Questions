@@ -166,7 +166,8 @@ class Ttt(App):
                                     if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                         player.remove(spr)
                 
-                else: 
+                
+                if hstop == False and vstop == False: 
                     for c in comp:
                         if abs(s.x-c.x) == 35:
                             print("equal xs")
