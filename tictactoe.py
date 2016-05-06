@@ -142,7 +142,7 @@ class Ttt(App):
                                     player.remove(spr)
                             break 
                 
-                
+                #HSTOP STILL NOT WORKING, vstop is activating but then doesn't equal so prints a random one???
                 elif hstop == True:
                     for co in comp:
                         if abs(co.y - s.y)==35:
