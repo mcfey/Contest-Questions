@@ -121,25 +121,26 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                         
-                        else:
-                            for c in comp:
-                                if abs(s.y-c.y) == 35:
-                                    print("vstop, y=")
-                                    c.visible = True
-                                    comp.remove(c)
-                                    for spr in player:
-                                        if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                    break
-                            else:
-                                print("vstop, random")
-                                crandom = random.choice(comp)
-                                crandom.visible = True
-                                comp.remove(crandom)
+                    else:
+                        for c in comp:
+                            if abs(s.y-c.y) == 35:
+                                print("vstop, y=")
+                                c.visible = True
+                                comp.remove(c)
                                 for spr in player:
-                                    if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                break 
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
+                            
+                        else:
+                            print("vstop, random")
+                            crandom = random.choice(comp)
+                            crandom.visible = True
+                            comp.remove(crandom)
+                            for spr in player:
+                                if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break 
                 
                 
                 elif hstop == True:
@@ -153,26 +154,26 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                        else:
-                            for c in comp:
-                                if abs(s.x-c.x) == 35:
-                                    print("hstop, x=")
-                                    c.visible = True
-                                    comp.remove(c)
-                                    for spr in player:
-                                        if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                    break
-                            
-                            else:
-                                print("hstop, random")
-                                crandom = random.choice(comp)
-                                crandom.visible = True
-                                comp.remove(crandom)
+                    else:
+                        for c in comp:
+                            if abs(s.x-c.x) == 35:
+                                print("hstop, x=")
+                                c.visible = True
+                                comp.remove(c)
                                 for spr in player:
-                                    if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                         player.remove(spr)
-                                break 
+                                break
+                            
+                        else:
+                            print("hstop, random")
+                            crandom = random.choice(comp)
+                            crandom.visible = True
+                            comp.remove(crandom)
+                            for spr in player:
+                                if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                        player.remove(spr)
+                            break 
                 
                 
                 else: 
