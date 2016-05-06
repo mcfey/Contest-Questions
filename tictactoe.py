@@ -113,6 +113,7 @@ class Ttt(App):
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - s.x)==35:
+                            print("vstop")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -123,6 +124,7 @@ class Ttt(App):
                         else:
                             for c in comp:
                                 if abs(s.y-c.y) == 35:
+                                    print("vstop, y=")
                                     c.visible = True
                                     comp.remove(c)
                                     for spr in player:
@@ -130,17 +132,20 @@ class Ttt(App):
                                             player.remove(spr)
                                     break
                             else:
+                                print("vstop, random")
                                 crandom = random.choice(comp)
                                 crandom.visible = True
                                 comp.remove(crandom)
                                 for spr in player:
                                     if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                             player.remove(spr)
+                                break 
                 
                 
                 elif hstop == True:
                     for co in comp:
                         if abs(co.y - s.y)==35:
+                            print("hstop")
                             co.visible = True
                             comp.remove(co)
                             for spr in player:
@@ -151,6 +156,7 @@ class Ttt(App):
                         else:
                             for c in comp:
                                 if abs(s.x-c.x) == 35:
+                                    print("hstop, x=")
                                     c.visible = True
                                     comp.remove(c)
                                     for spr in player:
@@ -159,18 +165,20 @@ class Ttt(App):
                                     break
                             
                             else:
+                                print("hstop, random")
                                 crandom = random.choice(comp)
                                 crandom.visible = True
                                 comp.remove(crandom)
                                 for spr in player:
                                     if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                         player.remove(spr)
+                                break 
                 
                 
-                if hstop == False and vstop == False: 
+                else: 
                     for c in comp:
                         if abs(s.x-c.x) == 35:
-                            print("equal xs")
+                            print("else, x=")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -178,7 +186,8 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                             
-                        elif abs(s.y-c.y) == 35: 
+                        elif abs(s.y-c.y) == 35:
+                            print("else, y=")
                             print("y values")
                             c.visible = True
                             comp.remove(c)
@@ -188,7 +197,7 @@ class Ttt(App):
                             break
                             
                     else:
-                        print("random")
+                        print("else, random")
                         crandom = random.choice(comp)
                         crandom.visible = True
                         comp.remove(crandom)
