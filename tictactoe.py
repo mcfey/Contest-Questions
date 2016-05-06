@@ -135,7 +135,7 @@ class Ttt(App):
                             break
                 
                 
-                if hstop==False and vstop==False:
+                else:
                     for c in comp:
                         if abs(s.x-c.x) == 35:
                             c.visible = True
