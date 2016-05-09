@@ -91,6 +91,8 @@ class Ttt(App):
                     #for p in playeralive:
                         #pxvalues.append(p.x)
                     #pxvalues.sort()
+                    print(playeralive)
+                    print(s)
                     for n in playeralive:
                         if n.x == s.x:
                             vstop = True
