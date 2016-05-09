@@ -65,7 +65,6 @@ while player==0:
         choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
 
 
-
 class Ttt(App):
     
     def __init__(self):
@@ -90,22 +89,23 @@ class Ttt(App):
                     
                 
                 if len(playeralive) >= 2:    
-                    pxvalues = [ ]
-                    for p in playeralive:
-                        pxvalues.append(p.x)
-                    pxvalues.sort()
-                    for n in list(range(len(playeralive)-1)):
-                        if pxvalues[n] == pxvalues[n+1]:
+                    #pxvalues = [ ]
+                    #for p in playeralive:
+                        #pxvalues.append(p.x)
+                    #pxvalues.sort()
+                    for n in playeralive:
+                        if n.x == s.x:
                                 vstop = True
                                 break
                 
                 if len(playeralive) >= 2:
-                    pyvalues = [ ]
-                    for play in playeralive:
-                        pyvalues.append(play.y)
-                    pyvalues.sort()
-                    for n in list(range(len(playeralive)-1)):
-                        if pyvalues[n] == pyvalues[n+1]:
+                    #pyvalues = [ ]
+                    #for play in playeralive:
+                        #pyvalues.append(play.y)
+                    #pyvalues.sort()
+                    #for n in list(range(len(playeralive)-1)):
+                    for nn in playeralive:
+                        if nn.x = s.x:
                                 hstop = True
                                 break
 
