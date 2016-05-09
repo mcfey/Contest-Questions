@@ -86,13 +86,7 @@ class Ttt(App):
                         print(comp)
                     
                 vstop = False
-                print(playeralive)
-
                 if len(playeralive) >= 2:    
-                    #pxvalues = [ ]
-                    #for p in playeralive:
-                        #pxvalues.append(p.x)
-                    #pxvalues.sort()
                     for n in playeralive:
                         if n.x == s.x:
                             vstop = True
