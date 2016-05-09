@@ -177,15 +177,17 @@ class Ttt(App):
                 elif diagonal == True:
                     for c in comp:
                         if abs(s.x-c.x)==135 and abs(s.x-c.x)==135:
+                            print("diag")
                             c.visible = True
-                                comp.remove(c)
-                                for spr in player:
-                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                        player.remove(spr)
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
                     else:
                         for c in comp:
                         if abs(s.x-c.x) == 35:
-                            print("else, x=")
+                            print("diag, x=")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -194,7 +196,7 @@ class Ttt(App):
                             break
                             
                         elif abs(s.y-c.y) == 35:
-                            print("else, y=")
+                            print("diag, y=")
                             c.visible = True
                             comp.remove(c)
                             for spr in player:
@@ -203,7 +205,7 @@ class Ttt(App):
                             break
                             
                     else:
-                        print("else, random")
+                        print("diag, random")
                         crandom = random.choice(comp)
                         crandom.visible = True
                         comp.remove(crandom)
