@@ -85,9 +85,8 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
-                
+                vstop = False
                 if len(playeralive) >= 2:    
-                    vstop = False
                     #pxvalues = [ ]
                     #for p in playeralive:
                         #pxvalues.append(p.x)
@@ -97,8 +96,8 @@ class Ttt(App):
                             vstop = True
                             break
                 
+                hstop = False
                 if len(playeralive) >= 2:
-                    hstop = False
                     #pyvalues = [ ]
                     #for play in playeralive:
                         #pyvalues.append(play.y)
