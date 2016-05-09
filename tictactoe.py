@@ -105,7 +105,7 @@ class Ttt(App):
                     #pyvalues.sort()
                     #for n in list(range(len(playeralive)-1)):
                     for nn in playeralive:
-                        if nn.x = s.x:
+                        if nn.x == s.x:
                                 hstop = True
                                 break
 
