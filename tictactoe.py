@@ -176,7 +176,7 @@ class Ttt(App):
                 
                 elif diagonal == True:
                     for c in comp:
-                        if abs(s.x-c.x)==135 and abs(s.x-c.x)==135:
+                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235):
                             print("diag")
                             c.visible = True
                             comp.remove(c)
