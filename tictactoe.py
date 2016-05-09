@@ -94,11 +94,6 @@ class Ttt(App):
                             break
                 
                 if len(playeralive) >= 1:
-                    #pyvalues = [ ]
-                    #for play in playeralive:
-                        #pyvalues.append(play.y)
-                    #pyvalues.sort()
-                    #for n in list(range(len(playeralive)-1)):
                     for nn in playeralive:
                         if nn.y == s.y:
                             hstop = True
