@@ -77,6 +77,7 @@ class Ttt(App):
         y = event.y
         vstop = False
         hstop = False
+        diagonal = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
@@ -93,14 +94,19 @@ class Ttt(App):
                             vstop = True
                             break
                 
-                if len(playeralive) >= 1:
                     for nn in playeralive:
                         if nn.y == s.y:
                             hstop = True
                             break
+                    
+                    for m in playeralive:
+                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100:
+                            diagonal = True
+                            break
                 
                 playeralive.append(s)
 
+                
                 if vstop == True:
                     for c in comp:
                         if abs(c.x - s.x)==35:
@@ -133,7 +139,8 @@ class Ttt(App):
                                     player.remove(spr)
                             break 
                 
-                #HSTOP STILL NOT WORKING, vstop is activating but then doesn't equal so prints a random one???
+               
+                
                 elif hstop == True:
                     for co in comp:
                         if abs(co.y - s.y)==35:
@@ -165,6 +172,46 @@ class Ttt(App):
                                 if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                         player.remove(spr)
                             break 
+                
+                
+                elif diagonal == True:
+                    for c in comp:
+                        if abs(s.x-c.x)==135 and abs(s.x-c.x)==135:
+                            c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                    else:
+                        for c in comp:
+                        if abs(s.x-c.x) == 35:
+                            print("else, x=")
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
+                            
+                        elif abs(s.y-c.y) == 35:
+                            print("else, y=")
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                    player.remove(spr)
+                            break
+                            
+                    else:
+                        print("else, random")
+                        crandom = random.choice(comp)
+                        crandom.visible = True
+                        comp.remove(crandom)
+                        for spr in player:
+                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                player.remove(spr)
+                        break 
+                        
                 
                 
                 else: 
