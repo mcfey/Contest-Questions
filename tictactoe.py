@@ -186,23 +186,23 @@ class Ttt(App):
                             break
                     else:
                         for c in comp:
-                        if abs(s.x-c.x) == 35:
-                            print("diag, x=")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
+                            if abs(s.x-c.x) == 35:
+                                print("diag, x=")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
                             
-                        elif abs(s.y-c.y) == 35:
-                            print("diag, y=")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
+                            elif abs(s.y-c.y) == 35:
+                                print("diag, y=")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
                             
                     else:
                         print("diag, random")
