@@ -75,6 +75,8 @@ class Ttt(App):
     def click(self, event):
         x = event.x
         y = event.y
+        vstop = False
+        hstop = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
@@ -84,15 +86,14 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
-                vstop = False
-                if len(playeralive) >= 2:    
+                
+                if len(playeralive) >= 1:    
                     for n in playeralive:
                         if n.x == s.x:
                             vstop = True
                             break
                 
-                hstop = False
-                if len(playeralive) >= 2:
+                if len(playeralive) >= 1:
                     #pyvalues = [ ]
                     #for play in playeralive:
                         #pyvalues.append(play.y)
