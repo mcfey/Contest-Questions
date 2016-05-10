@@ -133,7 +133,7 @@ class Ttt(App):
                             else: 
                                 if diagonal == True:
                                     for c in comp:
-                                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
+                                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165) or (abs(s.x-c.x)=135 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==235):
                                             print("vstop, hstop, diag")
                                             c.visible = True
                                             comp.remove(c)
@@ -154,7 +154,7 @@ class Ttt(App):
                         else:
                             if diagonal == True:
                                 for c in comp:
-                                    if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
+                                    if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165)or (abs(s.x-c.x)=135 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==235):
                                         print("vstop, diag")
                                         c.visible = True
                                         comp.remove(c)
@@ -187,7 +187,7 @@ class Ttt(App):
                     else:
                         if diagonal == True:
                             for c in comp:
-                                if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
+                                if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165)or (abs(s.x-c.x)=135 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==235):
                                     print("hstop, diag")
                                     c.visible = True
                                     comp.remove(c)
@@ -209,7 +209,7 @@ class Ttt(App):
                 
                 elif diagonal == True:
                     for c in comp:
-                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
+                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165)or (abs(s.x-c.x)=135 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==235):
                             print("diag")
                             c.visible = True
                             comp.remove(c)
