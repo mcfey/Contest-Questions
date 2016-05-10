@@ -132,15 +132,15 @@ class Ttt(App):
                         
                             else: 
                                 if diagonal == True:
-                                for c in comp:
-                                    if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
-                                        print("vstop, hstop, diag")
-                                        c.visible = True
-                                        comp.remove(c)
-                                        for spr in player:
-                                            if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                                player.remove(spr)
-                                        break
+                                    for c in comp:
+                                        if (abs(s.x-c.x)==135 and abs(s.y-c.y)==135) or (abs(s.x-c.x)==235 and abs(s.y-c.y)==235) or (abs(s.x-c.x)==65 and abs(s.y-c.y)==65) or (abs(s.x-c.x)==165 and abs(s.y-c.y)==165):
+                                            print("vstop, hstop, diag")
+                                            c.visible = True
+                                            comp.remove(c)
+                                            for spr in player:
+                                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                                    player.remove(spr)
+                                            break
                                 else:
                                 print("vstop, hstop, random")
                                 crandom = random.choice(comp)
