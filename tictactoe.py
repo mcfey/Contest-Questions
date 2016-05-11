@@ -87,7 +87,7 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
-                if len(playeralive) == 1:
+                if len(comp) == 8:
                     for c in comp:
                         if c.x==c.y or abs(c.x-c.y)==200:
                             print("corner")
