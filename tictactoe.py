@@ -87,7 +87,7 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
-                if s.x==s.y==195 or s.x==s.y==160:
+                if len(playeralive) = 1:
                     for c in comp:
                         if c.x==c.y or abs(c.x-c.y)==200:
                             print("corner")
@@ -98,8 +98,7 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                else:
-                    if len(playeralive) >= 1:    
+                if len(playeralive) >= 1:    
                         for n in playeralive:
                             if n.x == s.x:
                                 vstop = True
