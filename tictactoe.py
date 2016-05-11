@@ -89,7 +89,7 @@ class Ttt(App):
                     
                 if s.x==s.y==195 or s.x==s.y==160:
                     for c in comp:
-                        if c.x==c.y or abs(c.x-c.y)=200:
+                        if c.x==c.y or abs(c.x-c.y)==200:
                             print("corner")
                             c.visible = True
                             comp.remove(c)
