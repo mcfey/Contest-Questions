@@ -87,6 +87,17 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
+                if s.x==s.y==195 or s.x==s.y==160:
+                    for c in comp:
+                        if c.x==c.y or abs(c.x-c.y)=200:
+                            print("corner")
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                    player.remove(spr)
+                            break
+                
                 
                 if len(playeralive) >= 1:    
                     for n in playeralive:
