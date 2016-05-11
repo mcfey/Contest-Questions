@@ -98,8 +98,7 @@ class Ttt(App):
                                     player.remove(spr)
                             break
                 
-                
-                if len(playeralive) >= 1:    
+                elif len(playeralive) >= 1:    
                     for n in playeralive:
                         if n.x == s.x:
                             vstop = True
