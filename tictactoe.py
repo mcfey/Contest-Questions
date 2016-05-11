@@ -133,7 +133,7 @@ class Ttt(App):
                             else: 
                                 if diagonal == True:
                                     for c in comp:
-                                        if (abs(s.x-c.x)==abs(s.y-c.y)) or ( ((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                                        if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
                                             print("vstop, hstop, diag")
                                             c.visible = True
                                             comp.remove(c)
@@ -154,7 +154,7 @@ class Ttt(App):
                         else:
                             if diagonal == True:
                                 for c in comp:
-                                    if (abs(s.x-c.x)==abs(s.y-c.y)) or ( ((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                                    if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
                                         print("vstop, diag")
                                         c.visible = True
                                         comp.remove(c)
@@ -187,7 +187,7 @@ class Ttt(App):
                     else:
                         if diagonal == True:
                             for c in comp:
-                                if (abs(s.x-c.x)==abs(s.y-c.y)) or ( ((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                                if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
                                     print("hstop, diag")
                                     c.visible = True
                                     comp.remove(c)
@@ -209,7 +209,7 @@ class Ttt(App):
                 
                 elif diagonal == True:
                     for c in comp:
-                        if (abs(s.x-c.x)==abs(s.y-c.y)) or ( ((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                        if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
                             print("diag")
                             c.visible = True
                             comp.remove(c)
