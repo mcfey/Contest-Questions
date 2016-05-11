@@ -87,17 +87,6 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
-                if len(comp) == 8:
-                    for c in comp:
-                        if c.x==c.y or abs(c.x-c.y)==200:
-                            print("corner")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
-                                    player.remove(spr)
-                            break
-                
                 if len(playeralive) >= 1:    
                         for n in playeralive:
                             if n.x == s.x:
@@ -115,9 +104,20 @@ class Ttt(App):
                                 break
                 
                 playeralive.append(s)
-
                 
-                if vstop == True:
+                if s.x==s.y==95 or s.x==s.y==60: #DO LEN(COMP)==8 INSTEAD???
+                    for c in comp:
+                        if c.x==c.y or abs(c.x-c.y)==200:
+                            print("corner")
+                            c.visible = True
+                            comp.remove(c)
+                            for spr in player:
+                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                    player.remove(spr)
+                            break
+                
+                
+                elif vstop == True:
                     for c in comp:
                         if abs(c.x - s.x)==35:
                             print("vstop")
