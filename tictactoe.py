@@ -87,6 +87,17 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
+                if len(playeralive)==0:
+                        for c in comp:
+                            if c.x==c.y or abs(c.x-c.y)==200:
+                                print("corner")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                        player.remove(spr)
+                                break
+                
                 if len(playeralive) >= 1:    
                         for n in playeralive:
                             if n.x == s.x:
@@ -104,131 +115,149 @@ class Ttt(App):
                                 break
                 
                 playeralive.append(s)
-                
-                if s.x==s.y==95 or s.x==s.y==60: #DO LEN(COMP)==8 INSTEAD???
-                    for c in comp:
-                        if c.x==c.y or abs(c.x-c.y)==200:
-                            print("corner")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
-                                    player.remove(spr)
-                            break
-                
-                
-                elif vstop == True:
-                    for c in comp:
-                        if abs(c.x - s.x)==35:
-                            print("vstop")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
-                                    player.remove(spr)
-                            break
                     
-                    else: 
-                        if hstop == True:
-                            for co in comp:
-                                if abs(co.y - s.y)==35:
-                                    print("vstop, hstop")
-                                    co.visible = True
-                                    comp.remove(co)
-                                    for spr in player:
-                                        if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                    break
+                    elif vstop == True:
+                        for c in comp:
+                            if abs(c.x - s.x)==35:
+                                print("vstop")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                        player.remove(spr)
+                                break
                         
-                            else: 
+                        else: 
+                            if hstop == True:
+                                for co in comp:
+                                    if abs(co.y - s.y)==35:
+                                        print("vstop, hstop")
+                                        co.visible = True
+                                        comp.remove(co)
+                                        for spr in player:
+                                            if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
+                                                player.remove(spr)
+                                        break
+                            
+                                else: 
+                                    if diagonal == True:
+                                        for c in comp:
+                                            if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                                                print("vstop, hstop, diag")
+                                                c.visible = True
+                                                comp.remove(c)
+                                                for spr in player:
+                                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                                        player.remove(spr)
+                                                break
+                                    else:
+                                        print("vstop, hstop, random")
+                                        crandom = random.choice(comp)
+                                        crandom.visible = True
+                                        comp.remove(crandom)
+                                        for spr in player:
+                                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                                player.remove(spr)
+                                        break
+                        
+                            else:
                                 if diagonal == True:
                                     for c in comp:
                                         if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
-                                            print("vstop, hstop, diag")
+                                            print("vstop, diag")
                                             c.visible = True
                                             comp.remove(c)
                                             for spr in player:
                                                 if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                                     player.remove(spr)
                                             break
-                                else:
-                                    print("vstop, hstop, random")
-                                    crandom = random.choice(comp)
-                                    crandom.visible = True
-                                    comp.remove(crandom)
-                                    for spr in player:
-                                        if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                    break
+                                    else:
+                                        print("vstop, diag, random")
+                                        crandom = random.choice(comp)
+                                        crandom.visible = True
+                                        comp.remove(crandom)
+                                        for spr in player:
+                                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                                player.remove(spr)
+                                        break
+                                    
+                   
                     
+                    elif hstop == True:
+                        for co in comp:
+                            if abs(co.y - s.y)==35:
+                                print("hstop")
+                                co.visible = True
+                                comp.remove(co)
+                                for spr in player:
+                                    if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
                         else:
                             if diagonal == True:
                                 for c in comp:
                                     if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
-                                        print("vstop, diag")
+                                        print("hstop, diag")
                                         c.visible = True
                                         comp.remove(c)
                                         for spr in player:
                                             if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                                 player.remove(spr)
                                         break
-                                else:
-                                    print("vstop, diag, random")
-                                    crandom = random.choice(comp)
-                                    crandom.visible = True
-                                    comp.remove(crandom)
-                                    for spr in player:
-                                        if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
-                                            player.remove(spr)
-                                    break
                                 
-               
-                
-                elif hstop == True:
-                    for co in comp:
-                        if abs(co.y - s.y)==35:
-                            print("hstop")
-                            co.visible = True
-                            comp.remove(co)
-                            for spr in player:
-                                if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
-                    else:
-                        if diagonal == True:
-                            for c in comp:
-                                if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
-                                    print("hstop, diag")
-                                    c.visible = True
-                                    comp.remove(c)
-                                    for spr in player:
-                                        if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                            else:
+                                print("hstop, diag, random")
+                                crandom = random.choice(comp)
+                                crandom.visible = True
+                                comp.remove(crandom)
+                                for spr in player:
+                                    if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                             player.remove(spr)
-                                    break
-                            
-                        else:
-                            print("hstop, diag, random")
-                            crandom = random.choice(comp)
-                            crandom.visible = True
-                            comp.remove(crandom)
-                            for spr in player:
-                                if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                break
+                    
+                    
+                    elif diagonal == True:
+                        for c in comp:
+                            if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
+                                print("diag")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                         player.remove(spr)
-                            break
-                
-                
-                elif diagonal == True:
-                    for c in comp:
-                        if (abs(s.x-c.x)==abs(s.y-c.y)) or ( abs((abs(s.x-c.x))-(abs(s.y-c.y)))==70 ):
-                            print("diag")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
-                    else:
-                            print("diag, random")
+                                break
+                        else:
+                                print("diag, random")
+                                crandom = random.choice(comp)
+                                crandom.visible = True
+                                comp.remove(crandom)
+                                for spr in player:
+                                    if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break 
+                    
+                    else: 
+                        for c in comp:
+                            if abs(s.x-c.x) == 35:
+                                print("else, x=")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
+                                
+                            elif abs(s.y-c.y) == 35:
+                                print("else, y=")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                        player.remove(spr)
+                                break
+                                
+                        else:
+                            print("else, random")
                             crandom = random.choice(comp)
                             crandom.visible = True
                             comp.remove(crandom)
@@ -236,36 +265,6 @@ class Ttt(App):
                                 if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                     player.remove(spr)
                             break 
-                
-                else: 
-                    for c in comp:
-                        if abs(s.x-c.x) == 35:
-                            print("else, x=")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
-                            
-                        elif abs(s.y-c.y) == 35:
-                            print("else, y=")
-                            c.visible = True
-                            comp.remove(c)
-                            for spr in player:
-                                if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
-                                    player.remove(spr)
-                            break
-                            
-                    else:
-                        print("else, random")
-                        crandom = random.choice(comp)
-                        crandom.visible = True
-                        comp.remove(crandom)
-                        for spr in player:
-                            if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
-                                player.remove(spr)
-                        break 
 
 myapp = Ttt()
 myapp.run()
