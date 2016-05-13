@@ -107,6 +107,7 @@ class Ttt(App):
                                 print("center")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
@@ -141,6 +142,7 @@ class Ttt(App):
                                 print("vstop")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
@@ -153,6 +155,7 @@ class Ttt(App):
                                         print("vstop, hstop")
                                         co.visible = True
                                         comp.remove(co)
+                                        compalive.append(co)
                                         for spr in player:
                                             if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
                                                 player.remove(spr)
@@ -165,6 +168,7 @@ class Ttt(App):
                                                 print("vstop, hstop, diag")
                                                 c.visible = True
                                                 comp.remove(c)
+                                                compalive.append(c)
                                                 for spr in player:
                                                     if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                                         player.remove(spr)
@@ -174,6 +178,7 @@ class Ttt(App):
                                         crandom = random.choice(comp)
                                         crandom.visible = True
                                         comp.remove(crandom)
+                                        compalive.append(crandom)
                                         for spr in player:
                                             if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                                 player.remove(spr)
@@ -186,6 +191,7 @@ class Ttt(App):
                                             print("vstop, diag")
                                             c.visible = True
                                             comp.remove(c)
+                                            compalive.append(c)
                                             for spr in player:
                                                 if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                                     player.remove(spr)
@@ -195,6 +201,7 @@ class Ttt(App):
                                         crandom = random.choice(comp)
                                         crandom.visible = True
                                         comp.remove(crandom)
+                                        compalive.append(crandom)
                                         for spr in player:
                                             if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                                 player.remove(spr)
@@ -208,6 +215,7 @@ class Ttt(App):
                                 print("hstop")
                                 co.visible = True
                                 comp.remove(co)
+                                compalive.append(co)
                                 for spr in player:
                                     if abs(spr.x - co.x) <= 40 and abs(co.y - spr.y) <= 40:
                                         player.remove(spr)
@@ -219,6 +227,7 @@ class Ttt(App):
                                         print("hstop, diag")
                                         c.visible = True
                                         comp.remove(c)
+                                        compalive.append(c)
                                         for spr in player:
                                             if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                                 player.remove(spr)
@@ -229,6 +238,7 @@ class Ttt(App):
                                 crandom = random.choice(comp)
                                 crandom.visible = True
                                 comp.remove(crandom)
+                                compalive.append(crandom)
                                 for spr in player:
                                     if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                             player.remove(spr)
@@ -241,6 +251,7 @@ class Ttt(App):
                                 print("diag")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                         player.remove(spr)
@@ -250,6 +261,7 @@ class Ttt(App):
                                 crandom = random.choice(comp)
                                 crandom.visible = True
                                 comp.remove(crandom)
+                                compalive.append(crandom)
                                 for spr in player:
                                     if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                         player.remove(spr)
@@ -261,6 +273,7 @@ class Ttt(App):
                                 print("else, x=")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                         player.remove(spr)
@@ -270,6 +283,7 @@ class Ttt(App):
                                 print("else, y=")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
                                         player.remove(spr)
@@ -280,6 +294,7 @@ class Ttt(App):
                             crandom = random.choice(comp)
                             crandom.visible = True
                             comp.remove(crandom)
+                            compalive.append(crandom)
                             for spr in player:
                                 if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                     player.remove(spr)
