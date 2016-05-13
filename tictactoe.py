@@ -100,7 +100,7 @@ class Ttt(App):
                                 break
                     else:
                         for c in comp:
-                            if c.x==60 and c.y==60 or c.x==95 and c.y==95:
+                            if (c.x==60 and c.y==60) or (c.x==95 and c.y==95):
                                 print("center")
                                 c.visible = True
                                 comp.remove(c)
