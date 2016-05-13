@@ -118,7 +118,7 @@ class Ttt(App):
                 
                     playeralive.append(s)
                     
-                    elif vstop == True:
+                    if vstop == True:
                         for c in comp:
                             if abs(c.x - s.x)==35:
                                 print("vstop")
