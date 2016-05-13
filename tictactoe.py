@@ -88,7 +88,7 @@ class Ttt(App):
                         print(comp)
                     
                 if len(playeralive)==0:
-                    if (s.x!=60 or s.y!=60) and (s.x!=95 or s.y!=95):
+                    if (s.x!=60!=s.y!=60) or (s.x!=s.y!=95):
                         for c in comp:
                             if c.x==60 and c.y==60 or c.x==95 and c.y==95:
                                 print("center")
