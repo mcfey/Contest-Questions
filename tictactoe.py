@@ -35,6 +35,7 @@ Sprite(hline, (40, 240))
 osprites = [ ]
 xsprites = [ ]
 playeralive = [ ]
+compalive = [ ]
 
 
 for x in [95, 195, 295]:
@@ -95,6 +96,7 @@ class Ttt(App):
                                 print("corner")
                                 c.visible = True
                                 comp.remove(c)
+                                compalive.append(c)
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
