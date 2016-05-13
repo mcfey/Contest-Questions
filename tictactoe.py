@@ -90,7 +90,7 @@ class Ttt(App):
                 if len(playeralive)==0:
                     if s.x!=s.y!=60 or s.x!=s.y!=95:
                         for c in comp:
-                            if  c.x=c.y=60 or c.x=c.y=95:
+                            if c.x==c.y==60 or c.x==c.y==95:
                                 print("center")
                                 c.visible = True
                                 comp.remove(c)
