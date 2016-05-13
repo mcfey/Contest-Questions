@@ -107,7 +107,7 @@ class Ttt(App):
                             break
                     
                     for nn in playeralive:
-                        f nn.y == s.y:
+                        if nn.y == s.y:
                             hstop = True
                             break
                         
