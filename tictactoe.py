@@ -88,6 +88,17 @@ class Ttt(App):
                         print(comp)
                     
                 if len(playeralive)==0:
+                    if s.x!=s.y!=60 or s.x!=s.y!=95:
+                        for c in comp:
+                            if  c.x=c.y=60 or c.x=c.y=95:
+                                print("center")
+                                c.visible = True
+                                comp.remove(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                        player.remove(spr)
+                                break
+                    else:
                         for c in comp:
                             if c.x==c.y or abs(c.x-c.y)==200:
                                 print("corner")
