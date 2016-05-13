@@ -97,8 +97,7 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
-                        
-                        playeralive.append(s)
+                
                 
                 if len(playeralive) >= 1:    
                     for n in playeralive:
@@ -115,8 +114,6 @@ class Ttt(App):
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100:
                             diagonal = True
                             break
-                
-                    playeralive.append(s)
                     
                     if vstop == True:
                         for c in comp:
@@ -267,6 +264,8 @@ class Ttt(App):
                                 if abs(spr.x - crandom.x) <= 40 and abs(crandom.y - spr.y) <= 40:
                                     player.remove(spr)
                             break 
+                
+                playeralive.append(s)
 
 myapp = Ttt()
 myapp.run()
