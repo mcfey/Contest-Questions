@@ -113,11 +113,12 @@ class Ttt(App):
                                         player.remove(spr)
                                 break
                 
-                #if len(comp) >= 3:
+                #if len(compalive) >= 2:
                     #compx = []
-                    #for c in comp:
+                    #for c in compalive:
                         #compx.append(c.x)
-                    #for n in range(len(comp)
+                    #for n in range(len(compalive)):
+                        #if compx[n]
                 
                 
                 if len(playeralive) >= 1:    
