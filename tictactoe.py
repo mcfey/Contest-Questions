@@ -101,20 +101,20 @@ class Ttt(App):
                         playeralive.append(s)
                 
                 if len(playeralive) >= 1:    
-                        for n in playeralive:
-                            if n.x == s.x:
-                                vstop = True
-                                break
+                    for n in playeralive:
+                        if n.x == s.x:
+                            vstop = True
+                            break
                     
-                        for nn in playeralive:
-                            if nn.y == s.y:
-                                hstop = True
-                                break
+                    for nn in playeralive:
+                            f nn.y == s.y:
+                            hstop = True
+                            break
                         
-                        for m in playeralive:
-                            if abs(m.x-s.x)==100 and abs(m.y-s.y)==100:
-                                diagonal = True
-                                break
+                    for m in playeralive:
+                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100:
+                            diagonal = True
+                            break
                 
                     playeralive.append(s)
                     
