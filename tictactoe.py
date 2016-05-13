@@ -87,6 +87,7 @@ class Ttt(App):
                         comp.remove(sprite)
                         print(comp)
                     
+                
                 if len(playeralive)==0:
                     if (s.x==160 and s.y==160) or (s.x==195 and s.y==195):
                         for c in comp:
@@ -108,6 +109,12 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
+                
+                #if len(comp) >= 3:
+                    #compx = []
+                    #for c in comp:
+                        #compx.append(c.x)
+                    #for n in range(len(comp)
                 
                 
                 if len(playeralive) >= 1:    
