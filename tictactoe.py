@@ -97,6 +97,8 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
+                        
+                        playeralive.append(s)
                 
                 if len(playeralive) >= 1:    
                         for n in playeralive:
@@ -114,7 +116,7 @@ class Ttt(App):
                                 diagonal = True
                                 break
                 
-                playeralive.append(s)
+                    playeralive.append(s)
                     
                     elif vstop == True:
                         for c in comp:
