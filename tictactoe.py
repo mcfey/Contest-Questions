@@ -147,10 +147,9 @@ class Ttt(App):
                             if compx[n]==compx[n+1]:
                                 vwin=True
         
-                    
-                    for n in range(len(compalive)):
-                        if compy[n]==compy[n+1]:
-                            hwin=True
+                        for n in range(len(compalive)):
+                            if compy[n]==compy[n+1]:
+                                hwin=True
                     
                     
                     elif vstop == True:
