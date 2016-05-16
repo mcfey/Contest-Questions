@@ -112,14 +112,9 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
-                
-                #if len(compalive) >= 2:
-                    #compx = []
-                    #for c in compalive:
-                        #compx.append(c.x)
-                    #for n in range(len(compalive)):
-                        #if compx[n]
-                
+                                    
+                                    
+    
                 
                 if len(playeralive) >= 1:    
                     for n in playeralive:
