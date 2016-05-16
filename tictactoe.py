@@ -79,6 +79,8 @@ class Ttt(App):
         vstop = False
         hstop = False
         diagonal = False
+        hwin = False
+        vwin = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
@@ -113,8 +115,22 @@ class Ttt(App):
                                         player.remove(spr)
                                 break
                                     
-                                    
-    
+                
+                if len(compalive)>=2:
+                    compx = []
+                    compy = []
+                    for ca in compalive:
+                        compx.append(ca.x)
+                    for n in range(len(compalive)):
+                        if compx[n]==compx[n+1]:
+                            vwin=True
+                    for ca in compalive:
+                        compy.append(ca.y)
+                    for n in range(len(compalive)):
+                        if compy[n]==compy[n+1]:
+                            hwin=True
+     
+                if 
                 
                 if len(playeralive) >= 1:    
                     for n in playeralive:
