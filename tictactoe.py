@@ -114,23 +114,7 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
-                                    
-                
-                if len(compalive)>=2:
-                    compx = []
-                    compy = []
-                    for ca in compalive:
-                        compx.append(ca.x)
-                    for n in range(len(compalive)):
-                        if compx[n]==compx[n+1]:
-                            vwin=True
-                    for ca in compalive:
-                        compy.append(ca.y)
-                    for n in range(len(compalive)):
-                        if compy[n]==compy[n+1]:
-                            hwin=True
-     
-                if 
+                            
                 
                 if len(playeralive) >= 1:    
                     for n in playeralive:
@@ -148,7 +132,28 @@ class Ttt(App):
                             diagonal = True
                             break
                     
-                    if vstop == True:
+                    
+                    if len(compalive)>=2:
+                    compx = []
+                    compy = []
+                    for ca in compalive:
+                        compx.append(ca.x)
+                    for ca in compalive:
+                        compy.append(ca.y)
+                    sort.compx
+                    sort.compy
+                    
+                    for n in range(len(compalive)):
+                        if compx[n]==compx[n+1]:
+                            vwin=True
+        
+                    
+                    for n in range(len(compalive)):
+                        if compy[n]==compy[n+1]:
+                            hwin=True
+                    
+                    
+                    elif vstop == True:
                         for c in comp:
                             if abs(c.x - s.x)==35:
                                 print("vstop")
