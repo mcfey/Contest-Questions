@@ -134,18 +134,18 @@ class Ttt(App):
                     
                     
                     if len(compalive)>=2:
-                    compx = []
-                    compy = []
-                    for ca in compalive:
-                        compx.append(ca.x)
-                    for ca in compalive:
-                        compy.append(ca.y)
-                    sort.compx
-                    sort.compy
-                    
-                    for n in range(len(compalive)):
-                        if compx[n]==compx[n+1]:
-                            vwin=True
+                        compx = []
+                        compy = []
+                        for ca in compalive:
+                            compx.append(ca.x)
+                        for ca in compalive:
+                            compy.append(ca.y)
+                        sort.compx
+                        sort.compy
+                        
+                        for n in range(len(compalive)):
+                            if compx[n]==compx[n+1]:
+                                vwin=True
         
                     
                     for n in range(len(compalive)):
