@@ -140,17 +140,27 @@ class Ttt(App):
                             compx.append(ca.x)
                         for ca in compalive:
                             compy.append(ca.y)
-                        sort.compx
-                        sort.compy
+                        compx.sort
+                        compy.sort
                         
                         for n in range(len(compalive)):
                             if compx[n]==compx[n+1]:
-                                vwin=True
+                                for c in comp:
+                                    if c.x == compx[n]:
+                                        c.visible = True
+                                        comp.remove(c)
+                                        compalive.append(c)
+                                        for spr in player:
+                                            if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                                player.remove(spr)
+                                        break
         
-                        for n in range(len(compalive)):
-                            if compy[n]==compy[n+1]:
-                                hwin=True
+                            else:
+                                for n in range(len(compalive)):
+                                    if compy[n]==compy[n+1]:
+                                        hwin=True
                     
+                    #Sort out elif (below with vstop) and elses, make sure if vstop or hstop isn't true vstop will still run, and no doubles
                     
                     elif vstop == True:
                         for c in comp:
