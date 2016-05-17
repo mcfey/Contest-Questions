@@ -167,7 +167,7 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
-                                Sprite(compshape, (470, 80))
+                                Sprite(compshape, (470, 90))
                                 Sprite(w, (400, 160))
                                 Sprite(i, (455, 165))
                                 Sprite(n, (470, 165))
@@ -187,7 +187,7 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
-                                Sprite(compshape, (470, 80))
+                                Sprite(compshape, (470, 90))
                                 Sprite(w, (400, 160))
                                 Sprite(i, (455, 165))
                                 Sprite(n, (470, 165))
