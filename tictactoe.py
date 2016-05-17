@@ -143,7 +143,7 @@ class Ttt(App):
                             diagonal = True
                             break
                     
-                    #have to make sure there are not any player shapes already in that row/column 
+                    #WHAT IF THEY BLOOOCK YOU!!!!
                     #win diagonally
                     #diag is activated when two that are catty corner to each other are activated 
                     
