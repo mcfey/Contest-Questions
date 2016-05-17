@@ -143,6 +143,9 @@ class Ttt(App):
                             diagonal = True
                             break
                     
+                    #have to make sure there are not any player shapes already in that row/column 
+                    #win diagonally
+                    #diag is activated when two that are catty corner to each other are activated 
                     
                     if len(compalive)>=2:
                         compx = []
@@ -156,17 +159,28 @@ class Ttt(App):
                         
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
-                                vwin = True
-                                winningx = n
-                                print("vwin on")
-                                break 
+                                for n in playeralive:
+                                    if n.x == compx[n]:
+                                        vwin = False
+                                        break
+                                else:
+                                    vwin = True
+                                    winningx = n
+                                    print("vwin on")
+                                    break 
  
                         for n in range(len(compalive)-1):
                             if compy[n]==compy[n+1]:
-                                hwin=True
-                                winningy = n
-                                print("hwin on")
-                                break
+                                for n in playeralive:
+                                    for n in playeralive:
+                                        if n.y == compy[n]:
+                                            hwin = False
+                                            break
+                                    else:
+                                        hwin=True
+                                        winningy = n
+                                        print("hwin on")
+                                        break
                     
                     
                     if vwin == True:
