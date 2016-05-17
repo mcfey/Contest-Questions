@@ -57,10 +57,12 @@ while player==0:
     if choice=="x":
         player = xsprites
         comp = osprites
+        compshape = oshape
             
     elif choice=="o":
         player = osprites
         comp = xsprites
+        compshape = xshape
             
     else:
         choice = input("Invalid input. Try again. Would you like to be X's or O's? ")
@@ -157,7 +159,7 @@ class Ttt(App):
                                 print("hwin on")
                                 break
                     
-                    #Sort out elif (below with vstop) and elses, make sure if vstop or hstop isn't true vstop will still run, and no doubles
+                    
                     if vwin == True:
                         for c in comp:
                             if c.x == compx[winningx]:
@@ -165,6 +167,14 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
+                                Sprite(compshape, (470, 130))
+                                Sprite(w, (400, 160))
+                                Sprite(i, (455, 165))
+                                Sprite(n, (470, 165))
+                                Sprite(s, (514, 174))
+                                Sprite(s, (514, 187))
+                                Sprite(scover, (522,174))
+                                Sprite(scover, (505,185))
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
@@ -177,6 +187,14 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
+                                Sprite(compshape, (470, 130))
+                                Sprite(w, (400, 160))
+                                Sprite(i, (455, 165))
+                                Sprite(n, (470, 165))
+                                Sprite(s, (514, 174))
+                                Sprite(s, (514, 187))
+                                Sprite(scover, (522,174))
+                                Sprite(scover, (505,185))
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
