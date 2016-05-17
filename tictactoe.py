@@ -146,19 +146,21 @@ class Ttt(App):
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
                                 vwin = True
-                                nx = n
+                                winningx = n
+                                print("vwin on")
                                 break 
  
                         for n in range(len(compalive)-1):
                             if compy[n]==compy[n+1]:
                                 hwin=True
-                                ny = n
+                                winningy = n
+                                print("hwin on")
                                 break
                     
                     #Sort out elif (below with vstop) and elses, make sure if vstop or hstop isn't true vstop will still run, and no doubles
                     if vwin == True:
                         for c in comp:
-                            if c.x == compx[nx]:
+                            if c.x == compx[winningx]:
                                 print("vwin")
                                 c.visible = True
                                 comp.remove(c)
@@ -170,7 +172,7 @@ class Ttt(App):
                     
                     elif hwin == True:
                         for c in comp:
-                            if c.x == compx[nx]:
+                            if c.y == compy[winningy]:
                                 print("hwin")
                                 c.visible = True
                                 comp.remove(c)
