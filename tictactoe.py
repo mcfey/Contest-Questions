@@ -143,13 +143,13 @@ class Ttt(App):
                         compx.sort
                         compy.sort
                         
-                        for n in range(len(compalive)):
+                        for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
                                 vwin = True
                                 nx = n
                                 break 
  
-                        for n in range(len(compalive)):
+                        for n in range(len(compalive)-1):
                             if compy[n]==compy[n+1]:
                                 hwin=True
                                 ny = n
