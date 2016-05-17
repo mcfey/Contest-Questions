@@ -143,9 +143,9 @@ class Ttt(App):
                             diagonal = True
                             break
                     
-                    #WHAT IF THEY BLOOOCK YOU!!!!
                     #win diagonally
                     #diag is activated when two that are catty corner to each other are activated 
+                    #checking for player sprite in row/column NOT WORKING
                     
                     if len(compalive)>=2:
                         compx = []
@@ -181,7 +181,7 @@ class Ttt(App):
                                     print("hwin on")
                                     break
                     
-                    
+                    #WHAT IF THEY BLOOOCK YOU!!!!
                     if vwin == True:
                         for c in comp:
                             if c.x == compx[winningx]:
