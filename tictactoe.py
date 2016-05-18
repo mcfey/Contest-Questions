@@ -160,26 +160,26 @@ class Ttt(App):
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
                                 winningx = n
+                                vwin = True
+                                print("vwin on")
                                 for n in playeralive:
                                     if n.x == compx[winningx]:
                                         vwin = False
+                                        print("vwin off")
                                         break
-                                else:
-                                    vwin = True
-                                    print("vwin on")
-                                    break 
+                                break
+
  
                         for n in range(len(compalive)-1):
                             if compy[n]==compy[n+1]:
                                 winningy = n
+                                hwin=True
+                                print("hwin on")
                                 for n in playeralive:
                                     if n.y == compy[winningy]:
                                         hwin = False
                                         break
-                                else:
-                                    hwin=True
-                                    print("hwin on")
-                                    break
+                                break
                     
                     #WHAT IF THEY BLOOOCK YOU!!!!
                     if vwin == True:
