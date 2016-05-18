@@ -163,7 +163,7 @@ class Ttt(App):
                                 vwin = True
                                 print("vwin on")
                                 for n in playeralive:
-                                    if n.x == compx[winningx]:
+                                    if abs(n.x-compx[winningx])==35:
                                         vwin = False
                                         print("vwin off")
                                         break
@@ -176,7 +176,7 @@ class Ttt(App):
                                 hwin=True
                                 print("hwin on")
                                 for n in playeralive:
-                                    if n.y == compy[winningy]:
+                                    if abs(n.y-compy[winningy])==35:
                                         hwin = False
                                         break
                                 break
