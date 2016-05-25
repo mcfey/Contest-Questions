@@ -181,7 +181,6 @@ class Ttt(App):
                                         break
                                 break
                     
-                    #WHAT IF THEY BLOOOCK YOU!!!!
                     if vwin == True:
                         for c in comp:
                             if c.x == compx[winningx]:
