@@ -158,7 +158,6 @@ class Ttt(App):
                             break
                     
                     #win diagonally
-                    #checking for player sprite in row/column NOT WORKING
                     
                     if len(compalive)>=2:
                         compx = []
@@ -201,14 +200,6 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
-                                #Sprite(compshape, (470, 90))
-                                #Sprite(w, (400, 160))
-                                #Sprite(i, (455, 165))
-                                #Sprite(n, (470, 165))
-                                #Sprite(s, (514, 174))
-                                #Sprite(s, (514, 187))
-                                #Sprite(scover, (522,174))
-                                #Sprite(scover, (505,185))
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
@@ -221,14 +212,6 @@ class Ttt(App):
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
-                                #Sprite(compshape, (470, 90))
-                                #Sprite(w, (400, 160))
-                                #Sprite(i, (455, 165))
-                                #Sprite(n, (470, 165))
-                                #Sprite(s, (514, 174))
-                                #Sprite(s, (514, 187))
-                                #Sprite(scover, (522,174))
-                                #Sprite(scover, (505,185))
                                 for spr in player:
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
