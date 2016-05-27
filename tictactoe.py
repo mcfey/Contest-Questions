@@ -158,8 +158,6 @@ class Ttt(App):
                             break
                     
                     #win diagonally
-                    #diag is activated when two that are catty corner to each other are activated 
-                    #checking for player sprite in row/column NOT WORKING
                     
                     if len(compalive)>=2:
                         compx = []
