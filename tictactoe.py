@@ -144,16 +144,18 @@ class Ttt(App):
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
                             print("diag on")
-                            break
                             if playershape == oshape:
                                 print("oshape")
                                 if m.x!=m.y!=165 and s.x!=s.y!=165:
                                     print("diag off")
                                     diagonal = False
+                                    break
                             if playershape == xshape:
                                 if m.x!=m.y!=195 and s.x!=s.y!=195:
                                     print("diag off")
                                     diagonal = False
+                                    break
+                            break
                     
                     #win diagonally
                     #diag is activated when two that are catty corner to each other are activated 
