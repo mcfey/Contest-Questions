@@ -94,6 +94,7 @@ class Ttt(App):
         diagonal = False
         hwin = False
         vwin = False
+        dwin = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
@@ -140,15 +141,16 @@ class Ttt(App):
                             hstop = True
                             break
                         
+                    ##CHECK COORDINATES OF DIFFERENT SHAPES
                     for m in playeralive:
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
                             if playershape == oshape:
-                                if m.x!=m.y!=165 and s.x!=s.y!=165:
+                                if m.x!=m.y!=195 and s.x!=s.y!=195:
                                     diagonal = False
                                     break
                             if playershape == xshape:
-                                if m.x!=m.y!=195 and s.x!=s.y!=195:
+                                if m.x!=m.y!=165 and s.x!=s.y!=165:
                                     diagonal = False
                                     break
                             break
@@ -188,6 +190,27 @@ class Ttt(App):
                                         hwin = False
                                         break
                                 break
+                        
+                        if compshape == xshape:
+                            diaglist = []
+                            for n in compalive:
+                                if n.y==n.x:
+                                    diaglist.append(n)
+                                if len(diaglist) >= 2:
+                                    dwin = True
+                                    for n in diaglist:
+                                        if n.x == 165:
+                                            if n.x == 265:
+                                                winningd = 65
+                                            else:
+                                                winningd = 265
+                                    else:
+                                        winningd = 165
+                                    
+                                    ### DIAG IN THE OTHER DIRECTION
+                                    ### SET UP IF DIAG == TRUE LOOP
+                                        
+                        
                     
                     if vwin == True:
                         for c in comp:
