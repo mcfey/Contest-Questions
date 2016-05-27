@@ -141,7 +141,7 @@ class Ttt(App):
                             break
                         
                     for m in playeralive:
-                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100 
+                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
                             break
                             if playershape == oshape:
