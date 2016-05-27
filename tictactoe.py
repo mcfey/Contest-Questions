@@ -158,6 +158,7 @@ class Ttt(App):
                             break
                     
                     #win diagonally
+                    #checking for player sprite in row/column NOT WORKING
                     
                     if len(compalive)>=2:
                         compx = []
