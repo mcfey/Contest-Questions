@@ -65,11 +65,13 @@ player = 0
 while player==0:
     if choice=="x":
         player = xsprites
+        playershape = xshape
         comp = osprites
         compshape = oshape
             
     elif choice=="o":
         player = osprites
+        playershape = oshape
         comp = xsprites
         compshape = xshape
             
@@ -139,9 +141,15 @@ class Ttt(App):
                             break
                         
                     for m in playeralive:
-                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100:
+                        if abs(m.x-s.x)==100 and abs(m.y-s.y)==100 
                             diagonal = True
                             break
+                            if playershape == oshape:
+                                if m.x!=m.y!=165 and s.x!=s.y!=165:
+                                    diagonal = False
+                            if playershape == xshape:
+                                if m.x!=m.y!=195 and s.x!=s.y!=195:
+                                    diagonal = False
                     
                     #win diagonally
                     #diag is activated when two that are catty corner to each other are activated 
