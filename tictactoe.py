@@ -194,8 +194,10 @@ class Ttt(App):
                                 break
                         
                         if compshape == xshape:
+                            print("xshape")
                             for n in compalive:
                                 if n.y==n.x==165:
+                                    print("middle)
                                     for n in compalive:
                                         if n.y==n.x and n.x!=165:
                                             dwin = True
