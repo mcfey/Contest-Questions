@@ -212,7 +212,24 @@ class Ttt(App):
                                                     print("dwin off")
                                             print(winningd)
                         
-                        if comp comphape==o
+                        if comphape==ohape:#######
+                            for n in compalive:
+                                if n.y==n.x==195:
+                                    for n in compalive:
+                                        if n.y==n.x and n.x!=195:
+                                            dwin = True
+                                            print("dwin on")
+                                            if n.x == 295:
+                                                winningd = 95
+                                            else:
+                                                winningd = 295
+                                            break
+                                    
+                                            for n in playeralive:
+                                                if n.x==n.y and ab#(n.x - winningd)==35:
+                                                    dwin = False
+                                                    print("dwin off")
+                                            print(winningd)
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
@@ -244,7 +261,8 @@ class Ttt(App):
                     
                     elif dwin == True:
                         for c in comp:
-                            if c.y==c.x==winningd:
+                            print(#########
+                            if c.y==c.xandab(c.ywinningd)==35:######
                                 print("dwin")
                                 c.visible = True
                                 comp.remove(c)
