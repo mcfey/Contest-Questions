@@ -244,7 +244,7 @@ class Ttt(App):
                     elif dwin == True:
                         for c in comp:
                             if c.y==c.x==winningd:
-                               print("dwin")
+                                print("dwin")
                                 c.visible = True
                                 comp.remove(c)
                                 compalive.append(c)
