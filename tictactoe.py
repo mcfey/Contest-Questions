@@ -207,12 +207,13 @@ class Ttt(App):
                                             break
                                     
                                             for n in playeralive:
-                                                if n.x==n.y and (n.x - winningd)==35:
+                                                if n.x==n.y and abs(n.x - winningd)==35:
                                                     dwin = False
                                                     print("dwin off")
                                             print(winningd)
+                                            break
                         
-                        if comphape==ohape:#######
+                        if compshape==oshape:
                             for n in compalive:
                                 if n.y==n.x==195:
                                     for n in compalive:
@@ -223,13 +224,14 @@ class Ttt(App):
                                                 winningd = 95
                                             else:
                                                 winningd = 295
-                                            break
                                     
                                             for n in playeralive:
-                                                if n.x==n.y and ab#(n.x - winningd)==35:
+                                                if n.x==n.y and abs(n.x - winningd)==35:
                                                     dwin = False
                                                     print("dwin off")
                                             print(winningd)
+                                            break
+                                   
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
@@ -261,8 +263,8 @@ class Ttt(App):
                     
                     elif dwin == True:
                         for c in comp:
-                            print(#########
-                            if c.y==c.xandab(c.ywinningd)==35:######
+                            print("dwin activated")
+                            if c.y==c.x==winningd:
                                 print("dwin")
                                 c.visible = True
                                 comp.remove(c)
