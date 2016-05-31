@@ -214,6 +214,7 @@ class Ttt(App):
                                         if n.x==n.y and (n.x - winningd)==35:
                                             dwin = False
                                             print("dwin off")
+                                    print(winningd)
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
