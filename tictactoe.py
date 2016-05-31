@@ -130,6 +130,8 @@ class Ttt(App):
                                 break
                             
                 
+                #Could make code more efficient by checking to see if there is already a comp shape in that row/column
+                
                 if len(playeralive) >= 1:    
                     for n in playeralive:
                         if n.x == s.x:
@@ -207,8 +209,11 @@ class Ttt(App):
                                     else:
                                         winningd = 165
                                     
+                                    for n in playeralive:
+                                                if n.x==n.y and (n.x - winningd)==35:
+                                                    dwin = False
+                                    
                                     ### DIAG IN THE OTHER DIRECTION
-                                    ### SET UP IF DIAG == TRUE LOOP
                                         
                         
                     
@@ -235,6 +240,18 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break
+                    
+                    elif dwin == True:
+                        for c in comp:
+                            if c.y==c.x==winningd:
+                               print("dwin")
+                                c.visible = True
+                                comp.remove(c)
+                                compalive.append(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                        player.remove(spr)
+                                break 
                      
                     elif vstop == True:
                         for c in comp:
@@ -405,11 +422,3 @@ class Ttt(App):
 myapp = Ttt()
 myapp.run()
 
-
-#Sprite(w, (400, 160))
-#Sprite(i, (455, 165))
-#Sprite(n, (470, 165))
-#Sprite(s, (514, 174))
-#Sprite(s, (514, 187))
-#Sprite(scover, (522,174))
-#Sprite(scover, (505,185))
