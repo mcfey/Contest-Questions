@@ -200,6 +200,7 @@ class Ttt(App):
                                     diaglist.append(n)
                                 if len(diaglist) >= 2:
                                     dwin = True
+                                    print("dwin on")
                                     for n in diaglist:
                                         if n.x == 165:
                                             if n.x == 265:
@@ -210,8 +211,9 @@ class Ttt(App):
                                         winningd = 165
                                     
                                     for n in playeralive:
-                                                if n.x==n.y and (n.x - winningd)==35:
-                                                    dwin = False
+                                        if n.x==n.y and (n.x - winningd)==35:
+                                            dwin = False
+                                            print("dwin off")
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
