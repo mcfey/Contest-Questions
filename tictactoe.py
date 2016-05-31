@@ -194,27 +194,25 @@ class Ttt(App):
                                 break
                         
                         if compshape == xshape:
-                            diaglist = []
                             for n in compalive:
-                                if n.y==n.x:
-                                    diaglist.append(n)
-                                if len(diaglist) >= 2:
-                                    dwin = True
-                                    print("dwin on")
-                                    for n in diaglist:
-                                        if n.x == 165:
+                                if n.y==n.x==165:
+                                    for n in compalive:
+                                        if n.y==n.x and n.x!=165:
+                                            dwin = True
+                                            print("dwin on")
                                             if n.x == 265:
                                                 winningd = 65
                                             else:
                                                 winningd = 265
-                                    else:
-                                        winningd = 165
+                                            break
                                     
-                                    for n in playeralive:
-                                        if n.x==n.y and (n.x - winningd)==35:
-                                            dwin = False
-                                            print("dwin off")
-                                    print(winningd)
+                                            for n in playeralive:
+                                                if n.x==n.y and (n.x - winningd)==35:
+                                                    dwin = False
+                                                    print("dwin off")
+                                            print(winningd)
+                        
+                        if comphape==
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
