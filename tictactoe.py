@@ -212,7 +212,7 @@ class Ttt(App):
                                                     print("dwin off")
                                             print(winningd)
                         
-                        if comphape==
+                        if comp comphape==o
                                     
                                     ### DIAG IN THE OTHER DIRECTION
                                         
