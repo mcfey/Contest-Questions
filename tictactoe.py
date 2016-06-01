@@ -175,6 +175,7 @@ class Ttt(App):
                         compx.sort
                         compy.sort
                         print(compx)
+                        #PROBLEM WITH THIS SORTING
                         
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
