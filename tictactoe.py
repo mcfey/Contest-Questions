@@ -206,7 +206,7 @@ class Ttt(App):
                                                 winningd = 260
                                     
                                             for p in playeralive:
-                                                if p.x==p.y and abs(p.x - winningd)==35:
+                                                if p.x==p.y and abs(p.x - winningd)==35 or (s.x==s.y and abs(s.x-winningd)==35):
                                                     dwin = False
                                                     print("dwin off")
                                             break
@@ -224,7 +224,7 @@ class Ttt(App):
                                                 winningd = 295
                                     
                                             for p in playeralive:
-                                                if p.x==p.y and abs(p.x - winningd)==35:
+                                                if p.x==p.y and abs(p.x - winningd)==35 or (s.x==s.y and abs(s.x-winningd)==35):
                                                     dwin = False
                                                     print("dwin off")
                                             break
