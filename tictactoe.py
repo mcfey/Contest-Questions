@@ -171,10 +171,10 @@ class Ttt(App):
                             compx.append(ca.x)
                         for cal in compalive:
                             compy.append(cal.y)
-                        print(compy)
+                        print(compx)
                         compx.sort
                         compy.sort
-                        print(compy)
+                        print(compx)
                         
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
