@@ -194,11 +194,8 @@ class Ttt(App):
                                 break
                         
                         if compshape == xshape:
-                            print("xshape")
-                            print(compalive)
                             for n in compalive:
                                 if n.y==160 and n.x==160:
-                                    print("yes center")
                                     for com in compalive:
                                         if com.y==com.x and com.x!=160:
                                             dwin = True
@@ -212,28 +209,25 @@ class Ttt(App):
                                                 if p.x==p.y and abs(p.x - winningd)==35:
                                                     dwin = False
                                                     print("dwin off")
-                                            print(winningd)
                                             break
                         
-                        #RECOPY AND PASTE
-                        #if compshape==oshape:
-                            #for n in compalive:
-                                #if n.y==n.x==195:
-                                    #for n in compalive:
-                                        #if n.y==n.x and n.x!=195:
-                                            #dwin = True
-                                            #print("dwin on")
-                                            #if n.x == 295:
-                                                #winningd = 95
-                                            #else:
-                                                #winningd = 295
+                        if compshape==oshape:
+                            for n in compalive:
+                                if n.y==195 and n.x==195:
+                                    for com in compalive:
+                                        if com.y==com.x and com.x!=195:
+                                            dwin = True
+                                            print("dwin on")
+                                            if com.x == 295:
+                                                winningd = 95
+                                            else:
+                                                winningd = 295
                                     
-                                            #for n in playeralive:
-                                                #if n.x==n.y and abs(n.x - winningd)==35:
-                                                    #dwin = False
-                                                    #print("dwin off")
-                                            #print(winningd)
-                                            #break
+                                            for p in playeralive:
+                                                if p.x==p.y and abs(p.x - winningd)==35:
+                                                    dwin = False
+                                                    print("dwin off")
+                                            break
                                    
                                     
                                     ### DIAG IN THE OTHER DIRECTION
@@ -265,7 +259,6 @@ class Ttt(App):
                                 break
                     
                     elif dwin == True:
-                        print("dwin activated")
                         for c in comp:
                             if c.y==c.x and c.x == winningd:
                                 print("dwin")
