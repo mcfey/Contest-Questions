@@ -186,7 +186,7 @@ class Ttt(App):
                                         break
                                 break
 
- 
+                        print(compy)
                         for n in range(len(compalive)-1):
                             if compy[n]==compy[n+1]:
                                 winningy = n
@@ -197,7 +197,7 @@ class Ttt(App):
                                         hwin = False
                                         print("hwin off")
                                         break
-                                break
+                                #break
                         
                         if compshape == xshape:
                             for n in compalive:
