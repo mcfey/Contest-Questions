@@ -195,17 +195,18 @@ class Ttt(App):
                         
                         if compshape == xshape:
                             print("xshape")
+                            print(compalive)
                             for n in compalive:
-                                if n.y==165 and n.x==165:
+                                if n.y==160 and n.x==160:
                                     print("yes center")
                                     for com in compalive:
-                                        if com.y==com.x and com.x!=165:
+                                        if com.y==com.x and com.x!=160:
                                             dwin = True
                                             print("dwin on")
-                                            if com.x == 265:
-                                                winningd = 65
+                                            if com.x == 260:
+                                                winningd = 60
                                             else:
-                                                winningd = 265
+                                                winningd = 260
                                     
                                             for p in playeralive:
                                                 if p.x==p.y and abs(p.x - winningd)==35:
