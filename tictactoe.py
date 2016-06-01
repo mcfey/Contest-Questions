@@ -136,24 +136,29 @@ class Ttt(App):
                     for n in playeralive:
                         if n.x == s.x:
                             vstop = True
+                            print("vstop on")
                             break
                     
                     for nn in playeralive:
                         if nn.y == s.y:
                             hstop = True
+                            print("hstop on")
                             break
                         
                     ##CHECK COORDINATES OF DIFFERENT SHAPES
                     for m in playeralive:
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
+                            print("diagonal on")
                             if playershape == oshape:
                                 if m.x!=m.y!=195 and s.x!=s.y!=195:
                                     diagonal = False
+                                    print("diagonal off")
                                     break
                             if playershape == xshape:
                                 if m.x!=m.y!=165 and s.x!=s.y!=165:
                                     diagonal = False
+                                    print("diagonal off")
                                     break
                             break
                     
@@ -190,6 +195,7 @@ class Ttt(App):
                                 for n in playeralive:
                                     if abs(n.y-compy[winningy])==35 or abs(s.y-compy[winningy])==35:
                                         hwin = False
+                                        print("hwin off")
                                         break
                                 break
                         
