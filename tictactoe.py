@@ -171,8 +171,8 @@ class Ttt(App):
                             compx.append(ca.x)
                         for cal in compalive:
                             compy.append(cal.y)
-                        compx.sort
-                        compy.sort
+                        sort.compx
+                        sort.compy
                         
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
@@ -197,7 +197,7 @@ class Ttt(App):
                                         hwin = False
                                         print("hwin off")
                                         break
-                                #break
+                                break
                         
                         if compshape == xshape:
                             for n in compalive:
