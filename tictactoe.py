@@ -209,6 +209,7 @@ class Ttt(App):
                                                 if p.x==p.y and abs(p.x - winningd)==35 or (s.x==s.y and abs(s.x-winningd)==35):
                                                     dwin = False
                                                     print("dwin off")
+                                                break
                                             break
                         
                         if compshape==oshape:
@@ -227,6 +228,7 @@ class Ttt(App):
                                                 if p.x==p.y and abs(p.x - winningd)==35 or (s.x==s.y and abs(s.x-winningd)==35):
                                                     dwin = False
                                                     print("dwin off")
+                                                break
                                             break
                                    
                                     
