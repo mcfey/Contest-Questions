@@ -145,7 +145,7 @@ class Ttt(App):
                             print("hstop on")
                             break
                         
-                    ##CHECK COORDINATES OF DIFFERENT SHAPES
+                    #check the coordinates of different shapes??
                     for m in playeralive:
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
@@ -162,7 +162,8 @@ class Ttt(App):
                                     break
                             break
                     
-                    #win diagonally
+                    #win diagonally the other way
+                    #check for middle and THEN check for x and y difference of 200
                     
                     if len(compalive)>=2:
                         compx = []
@@ -171,10 +172,8 @@ class Ttt(App):
                             compx.append(ca.x)
                         for cal in compalive:
                             compy.append(cal.y)
-                        print(compx)
                         compx.sort()
                         compy.sort()
-                        print(compx)
                         
                         for n in range(len(compalive)-1):
                             if compx[n]==compx[n+1]:
@@ -237,10 +236,11 @@ class Ttt(App):
                                                     print("dwin off")
                                                     break
                                             break
-                                   
-                                    
-                                    ### DIAG IN THE OTHER DIRECTION
-                                        
+                                        if abs(com.y-com.x) == 200:
+                                            dwin = True
+                                            print("dwin on")
+                                            if com.x==295 and com.y==
+                                            # FINISH THIS FOR DIAGONAL THE OTHER WAY
                         
                     
                     if vwin == True:
