@@ -163,8 +163,6 @@ class Ttt(App):
                                     break
                             break
                     
-                    #win diagonally the other way
-                    #check for middle and THEN check for x and y difference of 200
                     
                     if len(compalive)>=2:
                         compx = []
@@ -232,7 +230,7 @@ class Ttt(App):
                                             for p in playeralive:
                                                 if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
                                                     dwin = False
-                                                    print("dwin off")
+                                                    print("dwin2 off")
                                                     break
                                             break
                         
@@ -268,7 +266,7 @@ class Ttt(App):
                                             for p in playeralive:
                                                 if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
                                                     dwin = False
-                                                    print("dwin off")
+                                                    print("dwin2 off")
                                                     break
                                             break
                                             # FINISH THIS FOR DIAGONAL THE OTHER WAY
