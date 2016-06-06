@@ -221,14 +221,14 @@ class Ttt(App):
                                             dwin2 = True
                                             print("dwin2 on")
                                             if com.x==260:
-                                                winningx = 60
-                                                winningy = 260
+                                                winningdx = 60
+                                                winningdy = 260
                                             else:
-                                                winningx = 260
-                                                winningy = 60
+                                                winningdx = 260
+                                                winningdy = 60
                                             
                                             for p in playeralive:
-                                                if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
+                                                if (abs(p.x- winningdx)==35 and abs(p.y - winningdy)==35) or (abs(s.x- winningdx)==35 and abs(s.y - winningdy)==35):
                                                     dwin2 = False
                                                     print("dwin2 off")
                                                     break
@@ -257,14 +257,14 @@ class Ttt(App):
                                             dwin2 = True
                                             print("dwin2 on")
                                             if com.x==295:
-                                                winningx = 95
-                                                winningy = 295
+                                                winningdx = 95
+                                                winningdy = 295
                                             else:
-                                                winningx = 295
-                                                winningy = 95
+                                                winningdx = 295
+                                                winningdy = 95
                                             
                                             for p in playeralive:
-                                                if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
+                                                if (abs(p.x- winningdx)==35 and abs(p.y - winningdy)==35) or (abs(s.x- winningdx)==35 and abs(s.y - winningdy)==35):
                                                     dwin2 = False
                                                     print("dwin2 off")
                                                     break
@@ -310,7 +310,7 @@ class Ttt(App):
                     
                     elif dwin2 == True:
                         for c in comp:
-                            if c.y==winningy and c.x == winningx:
+                            if c.y==winningdy and c.x == winningdx:
                                 print("dwin2")
                                 c.visible = True
                                 comp.remove(c)
