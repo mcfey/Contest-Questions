@@ -152,7 +152,7 @@ class Ttt(App):
                             diagonal = True
                             print("diagonal on")
                             for n in compalive:
-                                if n.x==n.y and ( n.x = 160 or n.x = 195):
+                                if n.x==n.y and ( n.x == 160 or n.x == 195):
                                     diagonal = False
                                     print("diagonal off")
                                     break
