@@ -95,6 +95,7 @@ class Ttt(App):
         hwin = False
         vwin = False
         dwin = False
+        dwin2 = False
         for s in player:
             if abs(x - s.x) <= 50 and abs(y - s.y) <= 50:
                 s.visible = True
@@ -217,6 +218,23 @@ class Ttt(App):
                                                     print("dwin off")
                                                     break
                                             break
+                                        
+                                        if abs(com.y-com.x) == 200:
+                                            dwin2 = True
+                                            print("dwin2 on")
+                                            if com.x==260:
+                                                winningx = 60
+                                                winningy = 260
+                                            else:
+                                                winningx = 260
+                                                winningy = 60
+                                            
+                                            for p in playeralive:
+                                                if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
+                                                    dwin = False
+                                                    print("dwin off")
+                                                    break
+                                            break
                         
                         if compshape==oshape:
                             for n in compalive:
@@ -236,10 +254,23 @@ class Ttt(App):
                                                     print("dwin off")
                                                     break
                                             break
+                                        
                                         if abs(com.y-com.x) == 200:
-                                            dwin = True
-                                            print("dwin on")
-                                            if com.x==295 and com.y==
+                                            dwin2 = True
+                                            print("dwin2 on")
+                                            if com.x==295:
+                                                winningx = 95
+                                                winningy = 295
+                                            else:
+                                                winningx = 295
+                                                winningy = 95
+                                            
+                                            for p in playeralive:
+                                                if (abs(p.x- winningx)==35 and abs(p.y - winningy)==35) or (abs(s.x- winningx)==35 and abs(s.y - winningy)==35):
+                                                    dwin = False
+                                                    print("dwin off")
+                                                    break
+                                            break
                                             # FINISH THIS FOR DIAGONAL THE OTHER WAY
                         
                     
@@ -278,6 +309,19 @@ class Ttt(App):
                                     if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
                                         player.remove(spr)
                                 break 
+                    
+                    elif dwin2 == True:
+                        for c in comp:
+                            if c.y==winningy and c.x == winningx:
+                                print("dwin2")
+                                c.visible = True
+                                comp.remove(c)
+                                compalive.append(c)
+                                for spr in player:
+                                    if abs(spr.x - c.x) <= 40 and abs(spr.y - c.y) <= 40:
+                                        player.remove(spr)
+                                break
+                        
                      
                     elif vstop == True:
                         for c in comp:
