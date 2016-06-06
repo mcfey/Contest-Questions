@@ -151,16 +151,19 @@ class Ttt(App):
                         if abs(m.x-s.x)==100 and abs(m.y-s.y)==100: 
                             diagonal = True
                             print("diagonal on")
-                            if playershape == oshape:
-                                if m.x!=m.y!=195 and s.x!=s.y!=195:
+                            for n in compalive:
+                                if n.x==n.y and ( n.x = 160 or n.x = 195):
                                     diagonal = False
                                     print("diagonal off")
                                     break
-                            if playershape == xshape:
-                                if m.x!=m.y!=165 and s.x!=s.y!=165:
-                                    diagonal = False
-                                    print("diagonal off")
+                            for mn in playeralive:
+                                if mn.x==mn.y and (mn.x == 160 or mn.x == 195)
+                                    diagonal = True
                                     break
+                            else:
+                                diagonal = False
+                                print("diagonal off")
+
                             break
                     
                     
