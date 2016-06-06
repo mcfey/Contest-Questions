@@ -1,14 +1,8 @@
-# Title of Your Project Here
-
+Tic Tac Toe
 
 
 ## Functional Specification
 
-This document should become the functional specification of the project you are working on.
-
-A functional specification describes in great detail how a device or program will appear to an
-outside user. That is, it treats all hardware as a "black box", the contents of which are completely
-unknown to the user. The functional specification should include sections with the following information:
 
 Your specification **should include** the following types of information:
 
@@ -31,3 +25,6 @@ Your specification should **not** include the following types of information:
 * Names of any specific files in the project.
 * How you will structure the classes, functions and code in your program.
 * The name of any files or tools that you will use to design the program.
+
+
+My program is Tic Tac Toe. It is shared through runpython.com. The program starts by prompting the user whether they would like to be Xs or Os. Once the user responds with one or the other, they are taken to a graphics screen in a new window showing an empty tic tac toe grid. The user can click in the grid and one of their shapes will appear in the box that they click in. After the user makes their move the computer prints one of their shapes in a different position on the board and the user can make another move. This continues until the board is full. 
