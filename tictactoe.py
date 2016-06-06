@@ -157,7 +157,7 @@ class Ttt(App):
                                     print("diagonal off")
                                     break
                             for mn in playeralive:
-                                if mn.x==mn.y and (mn.x == 160 or mn.x == 195)
+                                if mn.x==mn.y and (mn.x == 160 or mn.x == 195):
                                     diagonal = True
                                     break
                             else:
