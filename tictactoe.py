@@ -445,6 +445,28 @@ class Ttt(App):
                                         player.remove(spr)
                                 break
                         else:
+                            for c in comp:
+                                if abs(s.x-c.x) == 35:
+                                    print("else, x=")
+                                    c.visible = True
+                                    comp.remove(c)
+                                    compalive.append(c)
+                                    for spr in player:
+                                        if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                            player.remove(spr)
+                                    break
+                                
+                                elif abs(s.y-c.y) == 35:
+                                    print("else, y=")
+                                    c.visible = True
+                                    comp.remove(c)
+                                    compalive.append(c)
+                                    for spr in player:
+                                        if abs(spr.x - c.x) <= 40 and abs(c.y - spr.y) <= 40:
+                                            player.remove(spr)
+                                    break
+                                
+                            else:
                                 print("diag, random")
                                 crandom = random.choice(comp)
                                 crandom.visible = True
