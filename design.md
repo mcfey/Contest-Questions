@@ -14,4 +14,5 @@ The design specification should include information like:
 * Describe the logic and/or code behind every interaction with the user, and behind everything displayed.
 * If your program uses an unusual or notable *algorithm*, what is the algorithm and how does it work?
 
+
 I used runpython and ggame with Python 3 for this program. The program starts by prompting the user whether they would like to be X's or O's. Once the user picks one the program goes into ggame to an empty tic tac toe grid where the user starts the game by clicking in one of the squares to make the first move. The computer responds by making a move of its own. The computer recognizes if the user has two shapes in a row and an opportunity to win and blocks it. The computer also recognizes if it has an unblocked oppotunity to win. These are the basis on which it makes its moves. 
