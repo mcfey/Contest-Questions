@@ -33,14 +33,6 @@ Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
 Sprite(hline, (40, 240))
 
-#Sprite(w, (400, 160))
-#Sprite(i, (455, 165))
-#Sprite(n, (470, 165))
-#Sprite(s, (514, 174))
-#Sprite(s, (514, 187))
-#Sprite(scover, (522,174))
-#Sprite(scover, (505,185))
-
 osprites = [ ]
 xsprites = [ ]
 playeralive = [ ]
@@ -515,3 +507,11 @@ class Ttt(App):
 myapp = Ttt()
 myapp.run()
 
+
+#Sprite(w, (400, 160))
+#Sprite(i, (455, 165))
+#Sprite(n, (470, 165))
+#Sprite(s, (514, 174))
+#Sprite(s, (514, 187))
+#Sprite(scover, (522,174))
+#Sprite(scover, (505,185))
