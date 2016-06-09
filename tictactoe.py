@@ -22,12 +22,6 @@ hline = RectangleAsset(310, 10, thinline, black)
 oshape = CircleAsset(30, oline, clear)
 xshape = PolygonAsset([(5,5),(35,35),(65,5),(5,65),(35,35),(65,65)], xline, red)
 
-w = PolygonAsset([(5,5),(15,30),(25,15),(35,30),(45,5),(35,30),(25,15),(15,30)], thickline, clear)
-i = PolygonAsset([(5,0),(5,30)], thickline, clear)
-n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, clear)
-s = CircleAsset(7.5, medline, clear)
-scover = CircleAsset(5, whiteline, white)
-
 Sprite(vline, (140, 40))
 Sprite(vline, (240, 40))
 Sprite(hline, (40, 140))
@@ -37,7 +31,6 @@ osprites = [ ]
 xsprites = [ ]
 playeralive = [ ]
 compalive = [ ]
-
 
 for x in [95, 195, 295]:
     for y in [95, 195, 295]:
@@ -507,6 +500,13 @@ class Ttt(App):
 myapp = Ttt()
 myapp.run()
 
+
+
+w = PolygonAsset([(5,5),(15,30),(25,15),(35,30),(45,5),(35,30),(25,15),(15,30)], thickline, clear)
+i = PolygonAsset([(5,0),(5,30)], thickline, clear)
+n = PolygonAsset([(5,30),(5,5),(25,25),(25,0),(25,25),(5,5),(5,30)], thickline, clear)
+s = CircleAsset(7.5, medline, clear)
+scover = CircleAsset(5, whiteline, white)
 
 #Sprite(w, (400, 160))
 #Sprite(i, (455, 165))
